@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title _msttexthash="128271" _msthash="0">The Roadside Files</title>
   <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
-<!-- Fallback for older browsers -->
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" sizes="180x180" href="icon.png">
-
+  <!-- Fallback for older browsers -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  
   <style>
     body {
       margin: 0;
@@ -18,39 +18,39 @@
       font-family: Courier New, monospace;
       background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
     }
-
+    
     a {
       color: #e0c68d;
       text-decoration: none;
     }
-
+    
     a:hover {
       color: white;
     }
-
+    
     header {
       background: linear-gradient(to bottom, #1b1b1b, #080808);
       border-bottom: 4px solid #3b2f22;
       padding: 25px;
     }
-
+    
     header h1 {
       margin: 0;
       font-size: 52px;
       letter-spacing: 5px;
       color: #e0c68d;
     }
-
+    
     header p {
       margin-top: 10px;
       color: #8e8266;
       font-size: 14px;
     }
-
+    
     nav {
       margin-top: 20px;
     }
-
+    
     nav button {
       background: #2c241a;
       border: 1px solid #5d4c38;
@@ -61,18 +61,18 @@
       text-transform: uppercase;
       font-size: 11px;
     }
-
+    
     nav button:hover {
       background: #3d3123;
     }
-
+    
     .container {
       display: grid;
       grid-template-columns: 300px 1fr;
       gap: 20px;
       padding: 20px;
     }
-
+    
     .panel {
       background: #151515;
       border: 2px solid #3e3428;
@@ -80,7 +80,7 @@
       margin-bottom: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
-
+    
     .panel h2 {
       margin-top: 0;
       color: #d8b878;
@@ -89,7 +89,7 @@
       border-bottom: 1px solid #3e3428;
       padding-bottom: 10px;
     }
-
+    
     .warning {
       border: 1px solid #33281d;
       padding: 10px;
@@ -97,7 +97,7 @@
       background: #0f0f0f;
       font-size: 13px;
     }
-
+    
     .post {
       background: #151515;
       border: 2px solid #3e3428;
@@ -105,13 +105,13 @@
       overflow: hidden;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-
+    
     .post-header {
       background: #2b2118;
       padding: 15px;
       border-bottom: 1px solid #4d3c2a;
     }
-
+    
     .tag {
       display: inline-block;
       background: #3a2918;
@@ -121,27 +121,27 @@
       margin-right: 10px;
       text-transform: uppercase;
     }
-
+    
     .meta {
       color: #8c816d;
       font-size: 12px;
     }
-
+    
     .post-content {
       padding: 20px;
     }
-
+    
     .post-content h3 {
       margin-top: 0;
       font-size: 28px;
       color: #efe2bc;
     }
-
+    
     .post-content p {
       line-height: 1.6;
       color: #b8ab8b;
     }
-
+    
     .read-more {
       display: inline-block;
       margin-top: 15px;
@@ -151,11 +151,11 @@
       font-size: 12px;
       text-transform: uppercase;
     }
-
+    
     .read-more:hover {
       background: #3a2c1f;
     }
-
+    
     .submission input,
     .submission textarea {
       width: 100%;
@@ -166,12 +166,12 @@
       margin-bottom: 10px;
       font-family: inherit;
     }
-
+    
     .submission textarea {
       height: 120px;
       resize: none;
     }
-
+    
     .submission button {
       background: #3b2b1d;
       border: 1px solid #6d553a;
@@ -181,246 +181,396 @@
       text-transform: uppercase;
       font-size: 11px;
     }
-
+    
     .submission button:hover {
       background: #4c3725;
     }
-
+    
     footer {
       text-align: center;
       padding: 30px;
       color: #6f6655;
       font-size: 12px;
     }
-
+    
     @media (max-width: 900px) {
       .container {
         grid-template-columns: 1fr;
       }
     }
-
+    
     /* ========================================= */
-/* ROADSIDE FILES VISITOR COUNTER */
-/* ========================================= */
-
-.roadside-counter {
-  width: fit-content;
-  background: #0d0d0d;
-  border: 2px solid #3e3428;
-  padding: 18px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow:
-    0 0 15px rgba(0,0,0,0.8),
-    inset 0 0 10px rgba(255,255,255,0.03);
-
-  font-family: "Courier New", monospace;
-  position: relative;
-  overflow: hidden;
-}
-
-.roadside-counter::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
+    /* ROADSIDE FILES VISITOR COUNTER */
+    /* ========================================= */
+    
+    .roadside-counter {
+      width: fit-content;
+      background: #0d0d0d;
+      border: 2px solid #3e3428;
+      padding: 18px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow:
+      0 0 15px rgba(0,0,0,0.8),
+      inset 0 0 10px rgba(255,255,255,0.03);
+      
+      font-family: "Courier New", monospace;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .roadside-counter::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+      repeating-linear-gradient(
       to bottom,
       rgba(255,255,255,0.015),
       rgba(255,255,255,0.015) 1px,
       transparent 1px,
       transparent 3px
-    );
-
-  pointer-events: none;
-}
-
-.counter-title {
-  color: #9b8a67;
-  font-size: 11px;
-  letter-spacing: 3px;
-  margin-bottom: 12px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.counter-digits {
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-}
-
-.counter-digits span {
-  width: 34px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #050505;
-  border: 1px solid #5b4a32;
-
-  color: #f0ddb0;
-
-  font-size: 26px;
-  font-weight: bold;
-
-  box-shadow:
-    inset 0 0 8px rgba(255,255,255,0.05),
-    0 0 8px rgba(0,0,0,0.6);
-
-  text-shadow:
-    0 0 6px rgba(255,220,150,0.4);
-}
-
-.counter-warning {
-  margin-top: 12px;
-  color: #6f6655;
-  font-size: 10px;
-  text-align: center;
-  letter-spacing: 1px;
-  font-style: italic;
-}
-
+      );
+      
+      pointer-events: none;
+    }
+    
+    .counter-title {
+      color: #9b8a67;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    .counter-digits {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+    }
+    
+    .counter-digits span {
+      width: 34px;
+      height: 42px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      background: #050505;
+      border: 1px solid #5b4a32;
+      
+      color: #f0ddb0;
+      
+      font-size: 26px;
+      font-weight: bold;
+      
+      box-shadow:
+      inset 0 0 8px rgba(255,255,255,0.05),
+      0 0 8px rgba(0,0,0,0.6);
+      
+      text-shadow:
+      0 0 6px rgba(255,220,150,0.4);
+    }
+    
+    .counter-warning {
+      margin-top: 12px;
+      color: #6f6655;
+      font-size: 10px;
+      text-align: center;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+    
+    
+    
+    
+    /* ========================================= */
+    /* MISSING PERSONS PREVIEW */
+    /* ========================================= */
+    
+    
+    
+    .preview-header {
+      
+      color: #d8b878;
+      
+      font-family: "Courier New", monospace;
+      
+      font-size: 16px;
+      
+      letter-spacing: 3px;
+      
+      text-transform: uppercase;
+      
+      margin-bottom: 15px;
+      
+      border-bottom: 1px solid #3e3428;
+      
+      padding-bottom: 10px;
+    }
+    
+    .preview-card {
+      
+      display: flex;
+      gap: 14px;
+    }
+    
+    .preview-card img {
+      
+      width: 90px;
+      height: 110px;
+      
+      object-fit: cover;
+      
+      border: 2px solid #4d3c2a;
+      
+      filter:
+      contrast(1.05)
+      brightness(0.9)
+      saturate(0.8);
+    }
+    
+    .preview-content {
+      
+      font-family: "Courier New", monospace;
+      
+      flex: 1;
+    }
+    
+    .preview-name {
+      
+      color: #efe2bc;
+      
+      font-size: 18px;
+      
+      letter-spacing: 1px;
+      
+      margin-bottom: 8px;
+      
+      text-transform: uppercase;
+    }
+    
+    .preview-location {
+      
+      color: #b9a27b;
+      
+      font-size: 12px;
+      
+      line-height: 1.4;
+      
+      margin-bottom: 10px;
+    }
+    
+    .preview-date {
+      
+      color: #8e8266;
+      
+      font-size: 11px;
+      
+      letter-spacing: 1px;
+    }
+    
+    .preview-footer {
+      
+      margin-top: 15px;
+      
+      color: #6f6655;
+      
+      font-size: 11px;
+      
+      letter-spacing: 2px;
+      
+      text-align: right;
+      
+      font-family: "Courier New", monospace;
+      
+      text-transform: uppercase;
+    }
   </style>
 </head>
 
 <body>
-
-<header>
-  <h1 _msttexthash="128271" _msthash="1">THE ROADSIDE FILES</h1>
-  <p _msttexthash="7849231" _msthash="2">Archive indépendante des rencontres paranormales — depuis 1998</p>
-
-  <nav>
-    <button _msttexthash="114296" _msthash="3">Archives</button>
-    <button _msttexthash="210964" _msthash="4">Observations</button>
-    <button _msttexthash="79989" _msthash="5">Forums</button>
-    <button _msttexthash="159991" _msthash="6">Fuites du FBI</button>
-  </nav>
-</header>
-
-<div class="container">
-
-  <!-- SIDEBAR -->
-  <aside>    
-    <div class="roadside-counter">
-
-      <div class="counter-title">
-        LAST KNOWN VISITORS
-      </div>
+  
+  <header>
+    <h1 _msttexthash="128271" _msthash="1">THE ROADSIDE FILES</h1>
+    <p _msttexthash="7849231" _msthash="2">Archive indépendante des rencontres paranormales — depuis 1998</p>
     
-      <div class="counter-digits" id="visitorCounter">
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        <span>1</span>
-        <span>3</span>
-        <span>2</span>
-      </div>
+    <nav>
+      <button _msttexthash="114296" _msthash="3">Archives</button>
+      <button _msttexthash="210964" _msthash="4">Observations</button>
+      <button _msttexthash="79989" _msthash="5">Forums</button>
+      <button _msttexthash="159991" _msthash="6">Fuites du FBI</button>
+    </nav>
+  </header>
+  
+  <div class="container">
     
-      <div class="counter-warning">
-        Certains visiteurs ne repartent jamais.
+    <!-- SIDEBAR -->
+    <aside>    
+      <div class="roadside-counter">
+        
+        <div class="counter-title">
+          DERNIERS VISITEURS CONNUS
+        </div>
+        
+        <div class="counter-digits" id="visitorCounter">
+          <span>0</span>
+          <span>0</span>
+          <span>0</span>
+          <span>1</span>
+          <span>3</span>
+          <span>2</span>
+        </div>
+        
+        <div class="counter-warning">
+          Certains visiteurs ne repartent jamais.
+        </div>
+        
       </div>
+      <!-- ========================================= -->
+      <!-- MISSING PERSONS PREVIEW PANEL -->
+      <!-- INDEX PAGE WIDGET -->
+      <!-- ========================================= -->
+      
+      <a href="missing-persons.html" class="missing-preview-link">
+        
+        <div class="roadside-counter">
+          
+          <div class="preview-header" >
+            PERSONNES DISPARUES
+          </div>
+          
+          <div class="preview-card">
+            
+            <img
+            src="6323804176e699d62a9e98e21ff87f6f.jpg"
+            alt="Missing Person"
+            >
+            
+            <div class="preview-content">
+              
+              <div class="preview-name">
+                Tyler Ross
+              </div>
+              
+              <div class="preview-location">
+                Dernière localisation connue&nbsp;: près du pont Black Creek
+              </div>
+              
+              <div class="preview-date">
+                Disparu depuis 12 jours
+              </div>
+              
+            </div>
+            
+          </div>
+          
+          <div class="preview-footer">
+            VOIR TOUTES LES PERSONNES DISPARUES →
+          </div>
+          
+        </div>
+        
+      </a>
+      
+      <div class="panel">
+        <h2 _msttexthash="544778" _msthash="7">Derniers avertissements</h2>
+        
+        <div class="warning" _msttexthash="3449563" _msthash="8"> ⚠ De multiples disparitions signalées près du pont Black Creek.</div>
+        
+      </div>
+      
+      <div class="panel">
+        <h2 _msttexthash="331045" _msthash="11">Les plus discutés</h2>
+        
+        <p _msttexthash="4482296" _msthash="12">▸ Chasse mystérieuse près de Buffalo</p>
+        <p _msttexthash="4482296" _msthash="12">▸ Décès de vieillesse de William Caldwell</p>
+      </div>
+      
+      <div class="panel">
+        <h2 _msttexthash="423722" _msthash="16">Utilisateurs en ligne</h2>
+        
+        <p _msttexthash="98202" _msthash="17">Hunter77</p>
+        <p _msttexthash="175032" _msthash="18">RoadWatcher</p>
+        <p _msttexthash="183833" _msthash="19">RustyNails89</p>
+        <p _msttexthash="104468" _msthash="20">ImpalaLover67</p>
+        <p _msttexthash="104468" _msthash="20">Guest_404</p>
+      </div>
+      
+    </aside>
     
-    </div>
-
-    <div class="panel">
-      <h2 _msttexthash="544778" _msthash="7">Derniers avertissements</h2>
-
-      <div class="warning" _msttexthash="3449563" _msthash="8"> ⚠ De multiples disparitions signalées près du pont Black Creek.</div>
-
-    </div>
-
-    <div class="panel">
-      <h2 _msttexthash="331045" _msthash="11">Les plus discutés</h2>
-
-      <p _msttexthash="4482296" _msthash="12">▸ Chasse mystérieuse près de Buffalo</p>
-      <p _msttexthash="4482296" _msthash="12">▸ Décès de vieillesse de William Caldwell</p>
-    </div>
-
-    <div class="panel">
-      <h2 _msttexthash="423722" _msthash="16">Utilisateurs en ligne</h2>
-
-      <p _msttexthash="98202" _msthash="17">Hunter77</p>
-      <p _msttexthash="175032" _msthash="18">RoadWatcher</p>
-      <p _msttexthash="183833" _msthash="19">RustyNails89</p>
-      <p _msttexthash="104468" _msthash="20">ImpalaLover67</p>
-      <p _msttexthash="104468" _msthash="20">Guest_404</p>
-    </div>
-
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main>
-
-    <!-- POST 1 -->
-    <div class="post">
-
-      <div class="post-header">
-        <span class="meta" _msttexthash="3320200" _msthash="22">Publié par RoadWatcher — 14 octobre 2006</span>
+    <!-- MAIN CONTENT -->
+    <main>
+      
+      <!-- POST 1 -->
+      <div class="post">
+        
+        <div class="post-header">
+          <span class="meta" _msttexthash="3320200" _msthash="22">Publié par RoadWatcher — 14 octobre 2006</span>
+        </div>
+        
+        <div class="post-content">
+          <h3 _msttexthash="1220661" _msthash="23">Nouvelle disparition signalée près de Black Creek Bridge</h3>
+          
+          <p _msttexthash="30870736" _msthash="24"> Un nouvel accident a été signalé près du vieux pont de Black Creek peu après 1h du matin. Les secours ont retrouvé le véhicule abandonné, moteur encore allumé. D’après plusieurs riverains, des bruits inhabituels auraient été entendus dans la forêt au moment de la disparition.</p>
+          
+          <a href="file:///C:/Users/ElPre/Downloads/preview.html#" class="read-more" _msttexthash="460382" _msthash="25">Lire le dossier complet</a>
+        </div>
+        
       </div>
-
-      <div class="post-content">
-        <h3 _msttexthash="1220661" _msthash="23">Nouvelle disparition signalée près de Black Creek Bridge</h3>
-
-        <p _msttexthash="30870736" _msthash="24"> Un nouvel accident a été signalé près du vieux pont de Black Creek peu après 1h du matin. Les secours ont retrouvé le véhicule abandonné, moteur encore allumé. D’après plusieurs riverains, des bruits inhabituels auraient été entendus dans la forêt au moment de la disparition.</p>
-
-        <a href="file:///C:/Users/ElPre/Downloads/preview.html#" class="read-more" _msttexthash="460382" _msthash="25">Lire le dossier complet</a>
+      
+      <!-- POST 2 -->
+      <div class="post">
+        
+        <div class="post-header">
+          <span class="meta" _msttexthash="3320200" _msthash="22">Publié par RoadWatcher — 30 septembre 2006</span>
+        </div>
+        
+        <div class="post-content">
+          <h3 _msttexthash="1220661" _msthash="23">Plusieurs clients quittent précipitamment le Devil’s Rest Motel</h3>
+          
+          <p _msttexthash="30870736" _msthash="24"> Une voyageuse portée disparue depuis trois jours aurait été aperçue près du parking arrière du Devil’s Rest Motel. Le gérant refuse de commenter l’affaire. Plusieurs clients évoquent des silhouettes observées autour des chambres pendant la nuit.</p>
+          
+          <a href="file:///C:/Users/ElPre/Downloads/preview.html#" class="read-more" _msttexthash="460382" _msthash="25">Lire le dossier complet</a>
+        </div>
+        
       </div>
-
-    </div>
-
-    <!-- POST 2 -->
-    <div class="post">
-
-      <div class="post-header">
-        <span class="meta" _msttexthash="3320200" _msthash="22">Publié par RoadWatcher — 30 septembre 2006</span>
+      
+      <!-- SUBMISSION -->
+      <div class="panel submission">
+        
+        <h2 _msttexthash="360581" _msthash="36">Soumission anonyme</h2>
+        
+        <input type="text" placeholder="Emplacement..." _mstplaceholder="143104" _msthash="37">
+        
+        <textarea placeholder="Décris ce que tu as vu..." _mstplaceholder="440414" _msthash="38"></textarea>
+        
+        <button _msttexthash="631800" _msthash="39">Rapport de téléchargement</button>
+        
       </div>
-
-      <div class="post-content">
-        <h3 _msttexthash="1220661" _msthash="23">Plusieurs clients quittent précipitamment le Devil’s Rest Motel</h3>
-
-        <p _msttexthash="30870736" _msthash="24"> Une voyageuse portée disparue depuis trois jours aurait été aperçue près du parking arrière du Devil’s Rest Motel. Le gérant refuse de commenter l’affaire. Plusieurs clients évoquent des silhouettes observées autour des chambres pendant la nuit.</p>
-
-        <a href="file:///C:/Users/ElPre/Downloads/preview.html#" class="read-more" _msttexthash="460382" _msthash="25">Lire le dossier complet</a>
-      </div>
-
-    </div>
-
-    <!-- SUBMISSION -->
-    <div class="panel submission">
-
-      <h2 _msttexthash="360581" _msthash="36">Soumission anonyme</h2>
-
-      <input type="text" placeholder="Emplacement..." _mstplaceholder="143104" _msthash="37">
-
-      <textarea placeholder="Décris ce que tu as vu..." _mstplaceholder="440414" _msthash="38"></textarea>
-
-      <button _msttexthash="631800" _msthash="39">Rapport de téléchargement</button>
-
-    </div>
-
-  </main>
-
-</div>
-
-<footer _msttexthash="16419702" _msthash="40"> « La plupart des gens survivent parce qu’ils ne réalisent jamais ce qu’ils ont réellement vu. » </footer>
-
-
+      
+    </main>
+    
+  </div>
+  
+  <footer _msttexthash="16419702" _msthash="40"> « La plupart des gens survivent parce qu’ils ne réalisent jamais ce qu’ils ont réellement vu. » </footer>
+  
+  
 </body></html>
 
 
 <script>
-
+  
   // =========================================
   // SETTINGS
   // =========================================
   
   // Starting value
   let visitorCount = localStorage.getItem("roadsideCounter")
-    ? parseInt(localStorage.getItem("roadsideCounter"))
-    : 132;
+  ? parseInt(localStorage.getItem("roadsideCounter"))
+  : 132;
   
   // How often counter changes
   const UPDATE_INTERVAL = 5000;
@@ -434,24 +584,24 @@
   // =========================================
   
   function renderCounter() {
-  
+    
     const counter = document.getElementById("visitorCounter");
-  
+    
     // Convert number to 6 digits
     const padded = String(visitorCount).padStart(6, '0');
-  
+    
     counter.innerHTML = "";
-  
+    
     padded.split("").forEach(number => {
-  
+      
       const digit = document.createElement("span");
-  
+      
       digit.textContent = number;
-  
+      
       counter.appendChild(digit);
-  
+      
     });
-  
+    
   }
   
   // =========================================
@@ -459,37 +609,37 @@
   // =========================================
   
   function updateCounter() {
-  
+    
     // Small chance to increase
     if (Math.random() > 0.4) {
-  
+      
       const increase =
-        Math.floor(
-          Math.random() * (MAX_INCREMENT - MIN_INCREMENT + 1)
-        ) + MIN_INCREMENT;
-  
+      Math.floor(
+      Math.random() * (MAX_INCREMENT - MIN_INCREMENT + 1)
+      ) + MIN_INCREMENT;
+      
       visitorCount += increase;
-  
+      
     }
-  
+    
     // Rare creepy events
     const randomEvent = Math.random();
-  
+    
     // Creepy number
     if (randomEvent > 0.995) {
       visitorCount = 666;
     }
-  
+    
     // Another creepy number
     if (randomEvent < 0.003) {
       visitorCount = 1313;
     }
-  
+    
     // Save value
     localStorage.setItem("roadsideCounter", visitorCount);
-  
+    
     renderCounter();
-  
+    
   }
   
   // =========================================
@@ -502,4 +652,4 @@
   // Update every few seconds
   setInterval(updateCounter, UPDATE_INTERVAL);
   
-  </script>
+</script>
