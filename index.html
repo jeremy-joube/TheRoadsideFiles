@@ -199,6 +199,90 @@
       }
     }
 
+    /* ========================================= */
+/* ROADSIDE FILES VISITOR COUNTER */
+/* ========================================= */
+
+.roadside-counter {
+  width: fit-content;
+  background: #0d0d0d;
+  border: 2px solid #3e3428;
+  padding: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow:
+    0 0 15px rgba(0,0,0,0.8),
+    inset 0 0 10px rgba(255,255,255,0.03);
+
+  font-family: "Courier New", monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+.roadside-counter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  pointer-events: none;
+}
+
+.counter-title {
+  color: #9b8a67;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.counter-digits {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.counter-digits span {
+  width: 34px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #050505;
+  border: 1px solid #5b4a32;
+
+  color: #f0ddb0;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  box-shadow:
+    inset 0 0 8px rgba(255,255,255,0.05),
+    0 0 8px rgba(0,0,0,0.6);
+
+  text-shadow:
+    0 0 6px rgba(255,220,150,0.4);
+}
+
+.counter-warning {
+  margin-top: 12px;
+  color: #6f6655;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
   </style>
 </head>
 
@@ -219,7 +303,27 @@
 <div class="container">
 
   <!-- SIDEBAR -->
-  <aside>
+  <aside>    
+    <div class="roadside-counter">
+
+      <div class="counter-title">
+        LAST KNOWN VISITORS
+      </div>
+    
+      <div class="counter-digits" id="visitorCounter">
+        <span>0</span>
+        <span>0</span>
+        <span>0</span>
+        <span>1</span>
+        <span>3</span>
+        <span>2</span>
+      </div>
+    
+      <div class="counter-warning">
+        Certains visiteurs ne repartent jamais.
+      </div>
+    
+    </div>
 
     <div class="panel">
       <h2 _msttexthash="544778" _msthash="7">Derniers avertissements</h2>
@@ -267,6 +371,23 @@
 
     </div>
 
+    <!-- POST 2 -->
+    <div class="post">
+
+      <div class="post-header">
+        <span class="meta" _msttexthash="3320200" _msthash="22">Publié par RoadWatcher — 30 septembre 2006</span>
+      </div>
+
+      <div class="post-content">
+        <h3 _msttexthash="1220661" _msthash="23">Plusieurs clients quittent précipitamment le Devil’s Rest Motel</h3>
+
+        <p _msttexthash="30870736" _msthash="24"> Une voyageuse portée disparue depuis trois jours aurait été aperçue près du parking arrière du Devil’s Rest Motel. Le gérant refuse de commenter l’affaire. Plusieurs clients évoquent des silhouettes observées autour des chambres pendant la nuit.</p>
+
+        <a href="file:///C:/Users/ElPre/Downloads/preview.html#" class="read-more" _msttexthash="460382" _msthash="25">Lire le dossier complet</a>
+      </div>
+
+    </div>
+
     <!-- SUBMISSION -->
     <div class="panel submission">
 
@@ -288,3 +409,97 @@
 
 
 </body></html>
+
+
+<script>
+
+  // =========================================
+  // SETTINGS
+  // =========================================
+  
+  // Starting value
+  let visitorCount = localStorage.getItem("roadsideCounter")
+    ? parseInt(localStorage.getItem("roadsideCounter"))
+    : 132;
+  
+  // How often counter changes
+  const UPDATE_INTERVAL = 5000;
+  
+  // Random increment range
+  const MIN_INCREMENT = 1;
+  const MAX_INCREMENT = 3;
+  
+  // =========================================
+  // DISPLAY FUNCTION
+  // =========================================
+  
+  function renderCounter() {
+  
+    const counter = document.getElementById("visitorCounter");
+  
+    // Convert number to 6 digits
+    const padded = String(visitorCount).padStart(6, '0');
+  
+    counter.innerHTML = "";
+  
+    padded.split("").forEach(number => {
+  
+      const digit = document.createElement("span");
+  
+      digit.textContent = number;
+  
+      counter.appendChild(digit);
+  
+    });
+  
+  }
+  
+  // =========================================
+  // UPDATE FUNCTION
+  // =========================================
+  
+  function updateCounter() {
+  
+    // Small chance to increase
+    if (Math.random() > 0.4) {
+  
+      const increase =
+        Math.floor(
+          Math.random() * (MAX_INCREMENT - MIN_INCREMENT + 1)
+        ) + MIN_INCREMENT;
+  
+      visitorCount += increase;
+  
+    }
+  
+    // Rare creepy events
+    const randomEvent = Math.random();
+  
+    // Creepy number
+    if (randomEvent > 0.995) {
+      visitorCount = 666;
+    }
+  
+    // Another creepy number
+    if (randomEvent < 0.003) {
+      visitorCount = 1313;
+    }
+  
+    // Save value
+    localStorage.setItem("roadsideCounter", visitorCount);
+  
+    renderCounter();
+  
+  }
+  
+  // =========================================
+  // START
+  // =========================================
+  
+  // Initial render
+  renderCounter();
+  
+  // Update every few seconds
+  setInterval(updateCounter, UPDATE_INTERVAL);
+  
+  </script>
