@@ -3,7 +3,7 @@
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <title _msttexthash="765726" _msthash="0">The Roadside Files - Archives</title>
   <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
   <!-- Fallback for older browsers -->
@@ -11,355 +11,366 @@
   <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
   <style>
-
+    
     body {
-
+      
       margin: 0;
-
+      
       background:
-        #090909
-        url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-
+      #090909
+      url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+      
       color: #d4c7a1;
-
+      
       font-family: "Courier New", monospace;
     }
     a {
       color: #e0c68d;
       text-decoration: none;
     }
-
+    
     .site-title {
-
+      
       color: #e0c68d;
-
+      
       font-size: 52px;
-
+      
       letter-spacing: 5px;
-
+      
       margin: 0;
-
+      
       text-transform: uppercase;
     }
-
+    
     .site-subtitle {
-
+      
       color: #8e8266;
-
+      
       margin-top: 8px;
-
+      
       font-size: 13px;
-
+      
       letter-spacing: 2px;
     }
-
+    
     /* ========================================= */
     /* NAVIGATION */
     /* ========================================= */
-
+    
     nav {
-
+      
       margin-top: 20px;
     }
-
-
+    
+    
     nav a:hover {
-
+      
       background: #3a2c1f;
-
+      
       color: white;
     }
-
+    
     /* ========================================= */
     /* MAIN LAYOUT */
     /* ========================================= */
-
+    
     .container {
-
+      
       display: grid;
-
+      
       grid-template-columns: 320px 1fr;
-
+      
       gap: 25px;
-
+      
       padding: 25px;
-
+      
       max-width: 1600px;
-
+      
       margin: auto;
     }
-
+    
     /* ========================================= */
     /* SIDEBAR */
     /* ========================================= */
-
+    
     .sidebar-box {
-
+      
       background: #111;
-
+      
       border: 2px solid #3e3428;
-
+      
       padding: 18px;
-
+      
       margin-bottom: 20px;
-
+      
       box-shadow:
-        0 0 20px rgba(0,0,0,0.5);
+      0 0 20px rgba(0,0,0,0.5);
     }
-
+    
     .sidebar-title {
-
+      
       color: #d8b878;
-
+      
       font-size: 18px;
-
+      
       margin-bottom: 15px;
-
+      
       letter-spacing: 3px;
-
+      
       border-bottom: 1px solid #3e3428;
-
+      
       padding-bottom: 10px;
-
+      
       text-transform: uppercase;
     }
-
+    
     .sidebar-box p {
-
+      
       color: #a89b82;
-
+      
       line-height: 1.5;
-
+      
       font-size: 13px;
     }
-
+    
     .sidebar-box ul {
-
+      
       padding-left: 18px;
     }
-
+    
     .sidebar-box li {
-
+      
       margin-bottom: 10px;
-
+      
       color: #b9a27b;
-
+      
       font-size: 13px;
     }
-
+    
     /* ========================================= */
     /* ARTICLE */
     /* ========================================= */
-
+    
     .article {
-
+      
       background: #111;
-
+      
       border: 2px solid #3e3428;
-
+      
       box-shadow:
-        0 0 25px rgba(0,0,0,0.6);
-
+      0 0 25px rgba(0,0,0,0.6);
+      
       overflow: hidden;
-
+      
       position: relative;
     }
-
+    
     .article::before {
-
+      
       content: "";
-
+      
       position: absolute;
-
+      
       inset: 0;
-
+      
       background:
-        repeating-linear-gradient(
-          to bottom,
-          rgba(255,255,255,0.015),
-          rgba(255,255,255,0.015) 1px,
-          transparent 1px,
-          transparent 3px
-        );
-
+      repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 3px
+      );
+      
       pointer-events: none;
     }
-
+    
     .article-header {
-
+      
       background: #2b2118;
-
+      
       border-bottom: 1px solid #4d3c2a;
-
+      
       padding: 20px;
     }
-
+    
     .article-category {
-
+      
       display: inline-block;
-
+      
       background: #3a2918;
-
+      
       border: 1px solid #6a5438;
-
+      
       padding: 5px 10px;
-
+      
       font-size: 11px;
-
+      
       margin-bottom: 15px;
-
+      
       text-transform: uppercase;
-
+      
       letter-spacing: 2px;
     }
-
+    
     .article-title {
-
+      
       color: #efe2bc;
-
+      
       font-size: 38px;
-
+      
       margin: 0 0 15px 0;
-
+      
       line-height: 1.2;
     }
-
+    
     .article-meta {
-
+      
       color: #8e8266;
-
+      
       font-size: 12px;
-
+      
       letter-spacing: 1px;
     }
-
+    
     /* ========================================= */
     /* ARTICLE BODY */
     /* ========================================= */
-
+    
     .article-body {
-
+      
       padding: 30px;
     }
-
+    
     .article-body p {
-
+      
       color: #b9ab8e;
-
+      
       line-height: 1.8;
-
+      
       margin-bottom: 22px;
-
+      
       font-size: 15px;
     }
-
+    
+    .article-body ul {
+      
+      color: #b9ab8e;
+      
+      line-height: 1.8;
+      
+      margin-bottom: 22px;
+      
+      font-size: 15px;
+    }
+    
     .article-body h2 {
-
+      
       color: #d8b878;
-
+      
       margin-top: 35px;
-
+      
       margin-bottom: 20px;
-
+      
       letter-spacing: 2px;
-
+      
       text-transform: uppercase;
     }
-
+    
     .article-image {
-
+      
       width: 100%;
-
+      
       height: 420px;
-
+      
       object-fit: cover;
-
+      
       border: 2px solid #3e3428;
-
+      
       margin-bottom: 25px;
-
+      
       filter:
-        brightness(0.85)
-        contrast(1.05)
-        saturate(0.7);
+      brightness(0.85)
+      contrast(1.05)
+      saturate(0.7);
     }
-
+    
     .quote {
-
+      
       border-left: 3px solid #5b4a32;
-
+      
       padding-left: 20px;
-
+      
       color: #d8b878;
-
+      
       font-style: italic;
-
+      
       margin: 30px 0;
     }
-
+    
     /* ========================================= */
     /* FILE WARNING */
     /* ========================================= */
-
+    
     .warning-box {
-
+      
       background: #170d0d;
-
+      
       border: 1px solid #6b2f2f;
-
+      
       padding: 15px;
-
+      
       margin-top: 30px;
-
+      
       color: #d49a9a;
-
+      
       font-size: 13px;
-
+      
       line-height: 1.6;
     }
-
+    
     /* ========================================= */
     /* FOOTER */
     /* ========================================= */
-
+    
     footer {
-
+      
       text-align: center;
-
+      
       color: #6f6655;
-
+      
       padding: 30px;
-
+      
       font-size: 12px;
     }
-
+    
     /* ========================================= */
     /* MOBILE */
     /* ========================================= */
-
+    
     @media (max-width: 1000px) {
-
+      
       .container {
-
+        
         grid-template-columns: 1fr;
       }
-
+      
       .article-title {
-
+        
         font-size: 28px;
       }
-
+      
       .article-image {
-
+        
         height: 250px;
       }
     }
-
+    
   </style>
 </head>
 
 <body>
-
+  
   <!-- ========================================= -->
   <!-- HEADER -->
   <!-- ========================================= -->
@@ -367,104 +378,127 @@
   <!-- ========================================= -->
   <!-- MAIN -->
   <!-- ========================================= -->
-
+  
   <div class="container">
-
+    
     <!-- SIDEBAR -->
     
     <aside>
-
+      
       <div class="sidebar-box">
-
+        
         <div class="sidebar-title" _msttexthash="1937026" _msthash="8"> STATUT DE L’AFFAIRE </div>
-
+        
         <p _msttexthash="10217246" _msthash="9"> L’enquête reste officiellement non résolue.
- Les autorités locales continuent de nier toute connexion
- Entre les disparitions. </p>
-
-      </div>
-
-
-      <div class="sidebar-box">
-
-        <div class="sidebar-title" _msttexthash="302900" _msthash="15"> DERNIÈRE MISE À JOUR </div>
-
-        <p _msttexthash="2398110" _msthash="16"> 18 octobre 2006 — 02h13 </p>
-
-      </div>
-
-    </aside>
-
-    <!-- ARTICLE -->
-
-    <main>
-
-      <article class="article">
-
-        <div class="article-header">
-
-          <div class="article-category" _msttexthash="264615" _msthash="17">
-            Devil’s Rest Motel INCIDENT
-          </div>
-
-          <h1 class="article-title" _msttexthash="2030301" _msthash="18"> Plusieurs clients quittent précipitamment le Devil’s Rest Motel </h1>
-
-          <div class="article-meta" _msttexthash="3320200" _msthash="19"> Publié par RoadWatcher — 14 octobre 2006 </div>
-
-        </div>
-
-        <div class="article-body">
-
-          <img class="article-image" src="https://images.trvl-media.com/lodging/21000000/20590000/20583900/20583876/1d066c11.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Black Creek" _mstalt="146809" _msthash="20">
-
-          <p _msttexthash="68756831" _msthash="21"> Le bureau du shérif du comté de Mercer a été appelé à plusieurs reprises cette semaine après une série d’incidents signalés au Devil’s Rest Motel, un établissement situé le long de l’ancienne Route 9.</p>
-
-          <p _msttexthash="51627602" _msthash="22"> Selon plusieurs témoignages, des clients auraient quitté les lieux au milieu de la nuit après avoir entendu des bruits provenant des chambres inoccupées du second étage. Certains évoquent des coups répétés contre les murs tandis que d’autres parlent de conversations entendues dans des pièces officiellement fermées depuis plusieurs années. </p>
+          Les autorités locales continuent de nier toute connexion
+          Entre les disparitions. </p>
           
-          <p _msttexthash="51627602" _msthash="22"> Le gérant de l’établissement a refusé de répondre aux questions concernant les événements récents. </p>
-
-          <div class="quote" _msttexthash="33987551" _msthash="23"> « J’ai cru entendre quelqu’un marcher dans la chambre au-dessus de la mienne… sauf qu’on m’a dit le lendemain qu’il n’y avait personne à cet étage.»
- — Client anonyme </div>
-<h2 _msttexthash="452205" _msthash="25"> Incident signalé — Chambre 8 </h2>
-
-          <p _msttexthash="36106278" _msthash="26"> Un ancien employé du motel affirme que la chambre 8 aurait été condamnée à plusieurs reprises au cours des vingt dernières années avant d’être mystérieusement remise en service quelques semaines plus tard </p>
-
-          <p _msttexthash="28401438" _msthash="27"> Selon lui : </p>
-
-          <div class="quote" _msttexthash="33987551" _msthash="23"> « Les gens restaient rarement plus d’une nuit.»
-            — Ancien employé </div>
-
-            <p _msttexthash="81779802" _msthash="24"> Les autorités ont confirmé la disparition d’une voyageuse de passage identifiée comme Emily Carter, 27 ans, vue pour la dernière fois entrant dans la chambre 8 peu avant 1h du matin vendredi dernier. </p>
-
-
-          <div class="warning-box" _msttexthash="41469220" _msthash="28"> ATTENTION :
- Plusieurs utilisateurs tentant d’accéder à l’archive des séquences originales ont signalé des fichiers corrompus et des plantages soudains du navigateur.
- Procédez prudemment lors du téléchargement des copies en miroir. </div>
-
         </div>
-
-      </article>
-
-    </main>
-
-  </div>
-
-  <!-- ========================================= -->
-  <!-- FOOTER -->
-  <!-- ========================================= -->
-
-  <footer _msttexthash="16419702" _msthash="29"> « La plupart des gens survivent parce qu’ils ne réalisent jamais ce qu’ils ont réellement vu. » </footer>
-
-
-
-</body></html>
-
-<script>
-
-    fetch("header.html")
+        
+        
+        <div class="sidebar-box">
+          
+          <div class="sidebar-title" _msttexthash="302900" _msthash="15"> DERNIÈRE MISE À JOUR </div>
+          
+          <p _msttexthash="2398110" _msthash="16"> 18 octobre 2006 — 02h13 </p>
+          
+        </div>
+        
+      </aside>
+      
+      <!-- ARTICLE -->
+      
+      <main>
+        
+        <article class="article">
+          
+          <div class="article-header">
+            
+            <div class="article-category" _msttexthash="264615" _msthash="17">
+              Devil’s Rest Motel INCIDENT
+            </div>
+            
+            <h1 class="article-title" _msttexthash="2030301" _msthash="18"> Plusieurs clients quittent précipitamment le Devil’s Rest Motel </h1>
+            
+            <div class="article-meta" _msttexthash="3320200" _msthash="19"> Publié par RoadWatcher — 14 octobre 2006 </div>
+            
+          </div>
+          
+          <div class="article-body">
+            
+            <img class="article-image" src="https://images.trvl-media.com/lodging/21000000/20590000/20583900/20583876/1d066c11.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Black Creek" _mstalt="146809" _msthash="20">
+            
+            <p _msttexthash="68756831" _msthash="21"> J’ai reçu trois mails différents concernant le Devil’s Rest Motel cette semaine.
+              Même coin paumé. Même étage. Même chambre.</p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Pour ceux qui connaissent la vieille Route 9, le motel se trouve à une quinzaine de miles après Mercer County, juste avant la station-service abandonnée. L’endroit existe depuis longtemps et traîne déjà suffisamment de rumeurs pour remplir un cimetière. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Jusqu’ici je pensais surtout à des histoires de routiers fatigués. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Plus maintenant. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Une femme nommée Emily Carter aurait disparu vendredi dernier après avoir pris une chambre pour la nuit. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> D’après le rapport local : </p>
+              <ul>
+                <li>voiture toujours présente,</li>
+                <li>sac retrouvé dans la chambre,</li>
+                <li>porte verrouillée de l’intérieur.</li>
+              </ul>
+              <p _msttexthash="51627602" _msthash="22"> Aucune trace de lutte. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Le bureau du shérif parle d’une fugue. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Évidemment. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Ce qui m’intéresse surtout, ce sont les autres témoignages. </p>
+              
+              <div class="quote" _msttexthash="33987551" _msthash="23"> « J’ai regardé par le judas et j’ai vu quelqu’un immobile devant ma porte.
+                Je pensais que c’était le gérant jusqu’à ce que la lumière du couloir s’allume.»
+                — Client anonyme 
+              </div>
+              
+              <p _msttexthash="36106278" _msthash="26"> Le gérant refuse de parler de la chambre 8. </p>
+              
+              <p _msttexthash="28401438" _msthash="27"> Mauvais signe. </p>
+              
+              
+              <p _msttexthash="81779802" _msthash="24"> Les vieux motels savent garder leurs secrets, surtout sur les routes oubliées. Et quand un propriétaire refuse même de nier les rumeurs, c’est généralement qu’il a déjà vu quelque chose. </p>
+              
+              
+              <p _msttexthash="51627602" _msthash="22"> Si quelqu’un passe dans le secteur : </p>
+              <ul>
+                <li>évitez le second étage,</li>
+                <li>ne prenez pas la chambre 8,</li>
+                <li>et si vous entendez quelqu’un vous appeler depuis le couloir après 2h du matin, vérifiez d’abord sous la porte.</li>
+              </ul>
+              <p _msttexthash="51627602" _msthash="22"> Les vieux bâtiments ont parfois des choses qui refusent de partir. </p>
+              <p _msttexthash="51627602" _msthash="22"> Et ce motel sent le mauvais souvenir à plein nez. </p>
+            </div>
+            
+            
+          </article>
+          
+        </main>
+        
+      </div>
+      
+      <!-- ========================================= -->
+      <!-- FOOTER -->
+      <!-- ========================================= -->
+      
+      <footer _msttexthash="16419702" _msthash="29"> « La plupart des gens survivent parce qu’ils ne réalisent jamais ce qu’ils ont réellement vu. » </footer>
+      
+      
+      
+    </body></html>
+    
+    <script>
+      
+      fetch("header.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
       });
-    
+      
     </script>
