@@ -227,8 +227,7 @@
     
   </div>
   
-  <footer _msttexthash="16419702" _msthash="40"> « La plupart des gens survivent parce qu’ils ne réalisent jamais ce qu’ils ont réellement vu. » </footer>
-  
+  <div id="footer-placeholder"></div>
   
 </body></html>
 
@@ -243,5 +242,10 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("sidebar-placeholder").innerHTML = data;
+      });
+      fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
       });
 </script>

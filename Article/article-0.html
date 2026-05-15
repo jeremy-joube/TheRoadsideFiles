@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)file:///C:/Users/ElPre/Downloads/preview%20(3).html -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title _msttexthash="765726" _msthash="0">The Roadside Files - Archives</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
-  <!-- Fallback for older browsers -->
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
   <style>
     
     body {
@@ -329,20 +323,6 @@
       line-height: 1.6;
     }
     
-    /* ========================================= */
-    /* FOOTER */
-    /* ========================================= */
-    
-    footer {
-      
-      text-align: center;
-      
-      color: #6f6655;
-      
-      padding: 30px;
-      
-      font-size: 12px;
-    }
     
     /* ========================================= */
     /* MOBILE */
@@ -481,24 +461,20 @@
           
         </main>
         
-      </div>
-      
-      <!-- ========================================= -->
-      <!-- FOOTER -->
-      <!-- ========================================= -->
-      
-      <footer _msttexthash="16419702" _msthash="29"> « La plupart des gens survivent parce qu’ils ne réalisent jamais ce qu’ils ont réellement vu. » </footer>
-      
-      
-      
+      </div>      
+      <div id="footer-placeholder"></div>
     </body></html>
     
     <script>
       
-      fetch("header.html")
+      fetch("../header.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
       });
-      
+      fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
     </script>
