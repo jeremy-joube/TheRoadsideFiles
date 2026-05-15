@@ -24,28 +24,6 @@
 
       font-family: "Courier New", monospace;
     }
-
-    /* ========================================= */
-    /* HEADER */
-    /* ========================================= */
-
-    header {
-
-      background:
-        linear-gradient(to bottom, #1a1a1a, #080808);
-
-      border-bottom: 3px solid #3e3428;
-
-      padding: 25px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 52px;
-      letter-spacing: 5px;
-      color: #e0c68d;
-    }
-
     a {
       color: #e0c68d;
       text-decoration: none;
@@ -84,28 +62,6 @@
       margin-top: 20px;
     }
 
-    nav a {
-
-      display: inline-block;
-
-      background: #2b2118;
-
-      border: 1px solid #5b4a32;
-
-      color: #d4c7a1;
-
-      padding: 10px 15px;
-
-      margin-right: 10px;
-
-      text-decoration: none;
-
-      text-transform: uppercase;
-
-      font-size: 11px;
-
-      transition: 0.2s;
-    }
 
     nav a:hover {
 
@@ -407,23 +363,7 @@
   <!-- ========================================= -->
   <!-- HEADER -->
   <!-- ========================================= -->
-
-  <header>
-
-    <h1 class="site-title" _msttexthash="310856" _msthash="1"><a href="index.html">THE ROADSIDE FILES</a></h1>
-
-    <div class="site-subtitle" _msttexthash="4185844" _msthash="2"> ARCHIVÉ PARANORMAL REPORTS — FONDÉ EN 1999 </div>
-
-    <nav>
-      <a href="file:///C:/Users/ElPre/Downloads/preview%20(3).html#" _msttexthash="92079" _msthash="3">Accueil</a>
-      <a href="file:///C:/Users/ElPre/Downloads/preview%20(3).html#" _msttexthash="114296" _msthash="4">Archives</a>
-      <a href="file:///C:/Users/ElPre/Downloads/preview%20(3).html#" _msttexthash="392964" _msthash="5">Personnes disparues</a>
-      <a href="file:///C:/Users/ElPre/Downloads/preview%20(3).html#" _msttexthash="79989" _msthash="6">Forums</a>
-      <a href="file:///C:/Users/ElPre/Downloads/preview%20(3).html#" _msttexthash="396682" _msthash="7">Soumettre le rapport</a>
-    </nav>
-
-  </header>
-
+  <div id="header-placeholder"></div>
   <!-- ========================================= -->
   <!-- MAIN -->
   <!-- ========================================= -->
@@ -519,3 +459,13 @@
 
 
 </body></html>
+
+<script>
+
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+    
+    </script>
