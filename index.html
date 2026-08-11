@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <script src="visitor-counter.js"></script>
   
   <style>
     body {
@@ -229,10 +230,14 @@
       });
 
       fetch("sidebar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("sidebar-placeholder").innerHTML = data;
-      });
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("sidebar-placeholder").innerHTML = data;
+
+    initVisitorCounter();
+
+});
       fetch("footer.html")
       .then(response => response.text())
       .then(data => {
