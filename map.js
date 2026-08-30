@@ -5,6 +5,20 @@
 
     const cases = {
 
+        "the-horned-man": {
+
+            title: "The Horned Man",
+
+            location: "Maryland",
+
+            description:
+                "Reports of a spectral rider and a ghostly horse appearing during violent desert storms.",
+
+            link:
+                "0-the-horned-man.html"
+
+        },
+
         "ghost-rider": {
 
             title: "The Ghost Rider",
