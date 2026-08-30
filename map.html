@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>The Roadside Files — Case Map</title>
-
-<style>
-
-    /* =========================
-       GLOBAL
-    ========================= */
-
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title _msttexthash="128271" _msthash="0">The Roadside Files</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+  <!-- Fallback for older browsers -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <script src="visitor-counter.js"></script>
+  <script src="map.js"></script>  
+  <style>
     body {
-        margin: 0;
-        background: #11100e;
-        color: #d8c9a5;
-        font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      background: #0a0a0a;
+      color: #d4c7a1;
+      font-family: Courier New, monospace;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
     }
-
+    
     .map-container {
         position: relative;
         width: 95%;
@@ -312,324 +312,167 @@
 
     }
 
-</style>
+    
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
-
 <body>
+  
+  <!-- ========================================= -->
+  <!-- HEADER -->
+  <!-- ========================================= -->
+  <div id="header-placeholder"></div>
+  <!-- ========================================= -->
+  <!-- MAIN -->
+  <!-- ========================================= -->
+  
+  <div class="container">
+    
+    <!-- SIDEBAR -->
+    <div id="sidebar-placeholder"></div>
+    
+    <!-- MAIN CONTENT -->
+    <main>
+      
+        <div class="map-container">
 
-<div class="map-container">
-
-    <div class="map-header">
-
-        <h1>The Roadside Files</h1>
-
-        <p>
-            ARCHIVE MAP — UNEXPLAINED EVENTS ACROSS THE UNITED STATES
-        </p>
-
-    </div>
-
-
-    <div class="map" id="map">
-
-
-        <!-- =====================================
-             CASE 1 — ARIZONA
-        ====================================== -->
-
-        <div
-            class="case-marker"
-            style="left: 63%; top: 66%;"
-            data-case="ghost-rider">
-        </div>
-
-
-        <!-- =====================================
-             CASE 2 — NORTH CAROLINA
-        ====================================== -->
-
-        <div
-            class="case-marker"
-            style="left: 80%; top: 45%;"
-            data-case="logan-mercer">
-        </div>
-
-
-        <!-- =====================================
-             CASE 3 — LOUISIANA
-        ====================================== -->
-
-        <div
-            class="case-marker"
-            style="left: 72%; top: 65%;"
-            data-case="bayou">
-        </div>
-
-
-        <!-- =====================================
-             CASE 4 — CHICAGO
-        ====================================== -->
-
-        <div
-            class="case-marker"
-            style="left: 73%; top: 33%;"
-            data-case="dragon">
-        </div>
-
-
-        <!-- =====================================
-             INFORMATION WINDOW
-        ====================================== -->
-
-        <div class="case-info" id="caseInfo">
-
-            <h2 id="caseTitle">
-                Case
-            </h2>
-
-            <div class="location" id="caseLocation">
-                LOCATION
+            <div class="map-header">
+        
+                <h1>The Roadside Files</h1>
+        
+                <p>
+                    ARCHIVE MAP — UNEXPLAINED EVENTS ACROSS THE UNITED STATES
+                </p>
+        
             </div>
-
-            <p id="caseDescription">
-                Description
-            </p>
-
-            <a
-                id="caseLink"
-                href="#"
-                target="_self">
-
-                READ CASE FILE
-
-            </a>
-
+        
+        
+            <div class="map" id="map">
+        
+        
+                <!-- =====================================
+                     CASE 1 — ARIZONA
+                ====================================== -->
+        
+                <div
+                    class="case-marker"
+                    style="left: 63%; top: 66%;"
+                    data-case="ghost-rider">
+                </div>
+        
+        
+                <!-- =====================================
+                     CASE 2 — NORTH CAROLINA
+                ====================================== -->
+        
+                <div
+                    class="case-marker"
+                    style="left: 80%; top: 45%;"
+                    data-case="logan-mercer">
+                </div>
+        
+        
+                <!-- =====================================
+                     CASE 3 — LOUISIANA
+                ====================================== -->
+        
+                <div
+                    class="case-marker"
+                    style="left: 72%; top: 65%;"
+                    data-case="bayou">
+                </div>
+        
+        
+                <!-- =====================================
+                     CASE 4 — CHICAGO
+                ====================================== -->
+        
+                <div
+                    class="case-marker"
+                    style="left: 73%; top: 33%;"
+                    data-case="dragon">
+                </div>
+        
+        
+                <!-- =====================================
+                     INFORMATION WINDOW
+                ====================================== -->
+        
+                <div class="case-info" id="caseInfo">
+        
+                    <h2 id="caseTitle">
+                        Case
+                    </h2>
+        
+                    <div class="location" id="caseLocation">
+                        LOCATION
+                    </div>
+        
+                    <p id="caseDescription">
+                        Description
+                    </p>
+        
+                    <a
+                        id="caseLink"
+                        href="#"
+                        target="_self">
+        
+                        READ CASE FILE
+        
+                    </a>
+        
+                </div>
+        
+        
+                <!-- =====================================
+                     LEGEND
+                ====================================== -->
+        
+                <div class="map-legend">
+        
+                    <span class="legend-dot"></span>
+        
+                    Documented case
+        
+                </div>
+        
+            </div>
+        
         </div>
-
-
-        <!-- =====================================
-             LEGEND
-        ====================================== -->
-
-        <div class="map-legend">
-
-            <span class="legend-dot"></span>
-
-            Documented case
-
-        </div>
-
-    </div>
-
-</div>
+    </main>
+    
+  </div>
+  
+  <div id="footer-placeholder"></div>
+  
+</body></html>
 
 
 <script>
-
-    /* ==========================================
-       CASE DATABASE
-    ========================================== */
-
-    const cases = {
-
-        "ghost-rider": {
-
-            title: "The Ghost Rider",
-
-            location: "Arizona",
-
-            description:
-                "Reports of a spectral rider and a ghostly horse appearing during violent desert storms.",
-
-            link:
-                "articles/ghost-rider.html"
-
-        },
-
-
-        "logan-mercer": {
-
-            title: "Logan Mercer",
-
-            location: "North Carolina",
-
-            description:
-                "A rookie NASCAR driver whose extraordinary winning streak has raised unusual questions.",
-
-            link:
-                "articles/logan-mercer.html"
-
-        },
-
-
-        "bayou": {
-
-            title: "The Bayou Files",
-
-            location: "Louisiana",
-
-            description:
-                "Disappearances, an old voodoo practitioner and a spirit haunting the Louisiana bayou.",
-
-            link:
-                "articles/bayou.html"
-
-        },
-
-
-        "dragon": {
-
-            title: "The Chicago Incident",
-
-            location: "Chicago, Illinois",
-
-            description:
-                "A strange criminal organization, a mysterious banker and reports of something far older than the city itself.",
-
-            link:
-                "articles/chicago.html"
-
-        }
-
-    };
-
-
-    /* ==========================================
-       INTERACTION
-    ========================================== */
-
-    const markers =
-        document.querySelectorAll(".case-marker");
-
-    const info =
-        document.getElementById("caseInfo");
-
-    const title =
-        document.getElementById("caseTitle");
-
-    const location =
-        document.getElementById("caseLocation");
-
-    const description =
-        document.getElementById("caseDescription");
-
-    const link =
-        document.getElementById("caseLink");
-
-
-    markers.forEach(marker => {
-
-        marker.addEventListener("click", function(event) {
-
-            event.stopPropagation();
-
-            const caseID =
-                this.dataset.case;
-
-            const selectedCase =
-                cases[caseID];
-
-            title.textContent =
-                selectedCase.title;
-
-            location.textContent =
-                selectedCase.location;
-
-            description.textContent =
-                selectedCase.description;
-
-            link.href =
-                selectedCase.link;
-
-
-            /*
-             * Position the information box
-             * near the clicked marker
-             */
-
-            const mapRect =
-                document
-                    .getElementById("map")
-                    .getBoundingClientRect();
-
-            const markerRect =
-                this.getBoundingClientRect();
-
-
-            let x =
-                markerRect.left -
-                mapRect.left +
-                25;
-
-            let y =
-                markerRect.top -
-                mapRect.top;
-
-
-            /*
-             * Prevent the box from going
-             * outside the map.
-             */
-
-            if (x + 320 > mapRect.width) {
-
-                x =
-                    markerRect.left -
-                    mapRect.left -
-                    340;
-
-            }
-
-
-            if (y + 180 > mapRect.height) {
-
-                y =
-                    mapRect.height -
-                    200;
-
-            }
-
-
-            info.style.left =
-                x + "px";
-
-            info.style.top =
-                y + "px";
-
-
-            info.classList.add("active");
-
-        });
-
-    });
-
-
-    /*
-     * Close the window when clicking elsewhere
-     */
-
-    document
-        .getElementById("map")
-        .addEventListener("click", function() {
-
-            info.classList.remove("active");
-
-        });
-
-
-    /*
-     * Prevent closing when clicking
-     * inside the information window
-     */
-
-    info.addEventListener("click", function(event) {
-
-        event.stopPropagation();
-
-    });
+  fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+
+      fetch("sidebar.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("sidebar-placeholder").innerHTML = data;
+
+    initVisitorCounter();
+
+});
+      fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
 
 </script>
-
-</body>
-</html>
