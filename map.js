@@ -29,13 +29,27 @@
 
             title: "The Horned Man",
 
-            location: "Maryland",
+            location: "Black Creek, Maryland",
 
             description:
-                "Reports of a spectral rider and a ghostly horse appearing during violent desert storms.",
+                "",
 
             link:
                 "0-the-horned-man.html"
+
+        },
+
+        "rituel": {
+
+            title: "Where Roads Meet",
+
+            location: "Burlington, Vermont",
+
+            description:
+                "",
+
+            link:
+                "0-where-roads-meet.html"
 
         },
 
@@ -43,58 +57,58 @@
 
             title: "The Ghost Rider",
 
-            location: "Arizona",
+            location: "Tombstone, Arizona",
 
             description:
-                "Reports of a spectral rider and a ghostly horse appearing during violent desert storms.",
+                "",
 
             link:
-                "articles/ghost-rider.html"
+                ""
 
         },
 
 
         "logan-mercer": {
 
-            title: "Logan Mercer",
+            title: "The Last Lap",
 
-            location: "North Carolina",
+            location: "North Wilkesboro,North Carolina",
 
             description:
-                "A rookie NASCAR driver whose extraordinary winning streak has raised unusual questions.",
+                "",
 
             link:
-                "articles/logan-mercer.html"
+                ""
 
         },
 
 
         "bayou": {
 
-            title: "The Bayou Files",
+            title: "Dead Men Don't Drown",
 
             location: "Louisiana",
 
             description:
-                "Disappearances, an old voodoo practitioner and a spirit haunting the Louisiana bayou.",
+                "",
 
             link:
-                "articles/bayou.html"
+                ""
 
         },
 
 
         "dragon": {
 
-            title: "The Chicago Incident",
+            title: "Last Exit to Chicago",
 
             location: "Chicago, Illinois",
 
             description:
-                "A strange criminal organization, a mysterious banker and reports of something far older than the city itself.",
+                "",
 
             link:
-                "articles/chicago.html"
+                ""
 
         }
 
