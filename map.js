@@ -72,7 +72,7 @@
 
             title: "The Last Lap",
 
-            location: "North Wilkesboro, North Carolina",
+            location: "North Wilkesboro, Caroline du Nord",
 
             description:
                 "",
@@ -87,7 +87,7 @@
 
             title: "Dead Men Don't Drown",
 
-            location: "Louisiana",
+            location: "Louisiane",
 
             description:
                 "",
