@@ -475,4 +475,24 @@
         document.getElementById("footer-placeholder").innerHTML = data;
       });
 
+
+      document
+        .getElementById("map")
+        .addEventListener("click", function() {
+
+            info.classList.remove("active");
+
+        });
+
+
+    /*
+     * Prevent closing when clicking
+     * inside the information window
+     */
+
+    info.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+    });
 </script>
