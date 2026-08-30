@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title _msttexthash="765726" _msthash="0">The Roadside Files - Archives</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+  <!-- Fallback for older browsers -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <style>
+    
+    body {
+      
+      margin: 0;
+      
+      background:
+      #090909
+      url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+      
+      color: #d4c7a1;
+      
+      font-family: "Courier New", monospace;
+    }
+    a {
+      color: #e0c68d;
+      text-decoration: none;
+    }
+    
+    .site-title {
+      
+      color: #e0c68d;
+      
+      font-size: 52px;
+      
+      letter-spacing: 5px;
+      
+      margin: 0;
+      
+      text-transform: uppercase;
+    }
+    
+    .site-subtitle {
+      
+      color: #8e8266;
+      
+      margin-top: 8px;
+      
+      font-size: 13px;
+      
+      letter-spacing: 2px;
+    }
+    
+    /* ========================================= */
+    /* NAVIGATION */
+    /* ========================================= */
+    
+    nav {
+      
+      margin-top: 20px;
+    }
+    
+    
+    nav a:hover {
+      
+      background: #3a2c1f;
+      
+      color: white;
+    }
+    
+    /* ========================================= */
+    /* MAIN LAYOUT */
+    /* ========================================= */
+    
+    .container {
+      
+      display: grid;
+      
+      grid-template-columns: 320px 1fr;
+      
+      gap: 25px;
+      
+      padding: 25px;
+      
+      max-width: 1600px;
+      
+      margin: auto;
+    }
+    
+    /* ========================================= */
+    /* SIDEBAR */
+    /* ========================================= */
+    
+    .sidebar-box {
+      
+      background: #111;
+      
+      border: 2px solid #3e3428;
+      
+      padding: 18px;
+      
+      margin-bottom: 20px;
+      
+      box-shadow:
+      0 0 20px rgba(0,0,0,0.5);
+    }
+    
+    .sidebar-title {
+      
+      color: #d8b878;
+      
+      font-size: 18px;
+      
+      margin-bottom: 15px;
+      
+      letter-spacing: 3px;
+      
+      border-bottom: 1px solid #3e3428;
+      
+      padding-bottom: 10px;
+      
+      text-transform: uppercase;
+    }
+    
+    .sidebar-box p {
+      
+      color: #a89b82;
+      
+      line-height: 1.5;
+      
+      font-size: 13px;
+    }
+    
+    .sidebar-box ul {
+      
+      padding-left: 18px;
+    }
+    
+    .sidebar-box li {
+      
+      margin-bottom: 10px;
+      
+      color: #b9a27b;
+      
+      font-size: 13px;
+    }
+    
+    /* ========================================= */
+    /* ARTICLE */
+    /* ========================================= */
+    
+    .article {
+      
+      background: #111;
+      
+      border: 2px solid #3e3428;
+      
+      box-shadow:
+      0 0 25px rgba(0,0,0,0.6);
+      
+      overflow: hidden;
+      
+      position: relative;
+    }
+    
+    .article::before {
+      
+      content: "";
+      
+      position: absolute;
+      
+      inset: 0;
+      
+      background:
+      repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 3px
+      );
+      
+      pointer-events: none;
+    }
+    
+    .article-header {
+      
+      background: #2b2118;
+      
+      border-bottom: 1px solid #4d3c2a;
+      
+      padding: 20px;
+    }
+    
+    .article-category {
+      
+      display: inline-block;
+      
+      background: #3a2918;
+      
+      border: 1px solid #6a5438;
+      
+      padding: 5px 10px;
+      
+      font-size: 11px;
+      
+      margin-bottom: 15px;
+      
+      text-transform: uppercase;
+      
+      letter-spacing: 2px;
+    }
+    
+    .article-title {
+      
+      color: #efe2bc;
+      
+      font-size: 38px;
+      
+      margin: 0 0 15px 0;
+      
+      line-height: 1.2;
+    }
+    
+    .article-meta {
+      
+      color: #8e8266;
+      
+      font-size: 12px;
+      
+      letter-spacing: 1px;
+    }
+    
+    /* ========================================= */
+    /* ARTICLE BODY */
+    /* ========================================= */
+    
+    .article-body {
+      
+      padding: 30px;
+    }
+    
+    .article-body p {
+      
+      color: #b9ab8e;
+      
+      line-height: 1.8;
+      
+      margin-bottom: 22px;
+      
+      font-size: 15px;
+    }
+    
+    .article-body ul {
+      
+      color: #b9ab8e;
+      
+      line-height: 1.8;
+      
+      margin-bottom: 22px;
+      
+      font-size: 15px;
+    }
+    
+    .article-body h2 {
+      
+      color: #d8b878;
+      
+      margin-top: 35px;
+      
+      margin-bottom: 20px;
+      
+      letter-spacing: 2px;
+      
+      text-transform: uppercase;
+    }
+    
+    .article-image {
+      
+      width: 100%;
+      
+      height: 420px;
+      
+      object-fit: cover;
+      
+      border: 2px solid #3e3428;
+      
+      margin-bottom: 25px;
+      
+      filter:
+      brightness(0.85)
+      contrast(1.05)
+      saturate(0.7);
+    }
+    
+    .quote {
+      
+      border-left: 3px solid #5b4a32;
+      
+      padding-left: 20px;
+      
+      color: #d8b878;
+      
+      font-style: italic;
+      
+      margin: 30px 0;
+    }
+    
+    /* ========================================= */
+    /* FILE WARNING */
+    /* ========================================= */
+    
+    .warning-box {
+      
+      background: #170d0d;
+      
+      border: 1px solid #6b2f2f;
+      
+      padding: 15px;
+      
+      margin-top: 30px;
+      
+      color: #d49a9a;
+      
+      font-size: 13px;
+      
+      line-height: 1.6;
+    }
+    
+    
+    /* ========================================= */
+    /* MOBILE */
+    /* ========================================= */
+    
+    @media (max-width: 1000px) {
+      
+      .container {
+        
+        grid-template-columns: 1fr;
+      }
+      
+      .article-title {
+        
+        font-size: 28px;
+      }
+      
+      .article-image {
+        
+        height: 250px;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  
+  <!-- ========================================= -->
+  <!-- HEADER -->
+  <!-- ========================================= -->
+  <div id="header-placeholder"></div>
+  <!-- ========================================= -->
+  <!-- MAIN -->
+  <!-- ========================================= -->
+  
+  <div class="container">
+    
+    <!-- SIDEBAR -->
+    
+    <aside>
+      
+      <div class="sidebar-box">
+        
+        <div class="sidebar-title" _msttexthash="1937026" _msthash="8"> STATUT DE L’AFFAIRE </div>
+        
+        <p _msttexthash="10217246" _msthash="9"> L’enquête reste officiellement non résolue.</p>
+          
+        </div>
+        
+        
+        <div class="sidebar-box">
+          
+          <div class="sidebar-title" _msttexthash="302900" _msthash="15"> DERNIÈRE MISE À JOUR </div>
+          
+          <p _msttexthash="2398110" _msthash="16"> 20 septembre 2006 — 23h48 </p>
+          
+        </div>
+        
+      </aside>
+      
+      <!-- ARTICLE -->
+      
+      <main>
+        
+        <article class="article">
+          
+          <div class="article-header">
+            
+            <div class="article-category" _msttexthash="264615" _msthash="17">
+              Where Roads meet
+            </div>
+            
+            <h1 class="article-title" _msttexthash="2030301" _msthash="18"> Les Égarés se réunissent (Vermont)</h1>
+            
+            <div class="article-meta" _msttexthash="3320200" _msthash="19"> Publié par Guest_404 — 20 septembre 2006 </div>
+            
+          </div>
+          
+          <div class="article-body">
+            
+            <img class="article-image" src="1- Moran Plant.jpg" alt="Graves Manor" _mstalt="146809" _msthash="20">
+            
+            <p _msttexthash="68756831" _msthash="21"> Vous avez déjà entendu parler des Égarés ? </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Probablement pas.</p>
+              
+              <p _msttexthash="51627602" _msthash="22"> D'après plusieurs sources - dont certaines que je ne peux malheureusement pas citer ici - leur prochaine réunion aurait lieu à la vieille centrale Moran. </p>
+
+              <p _msttexthash="51627602" _msthash="22"> Une centrale abandonnée depuis des années. </p>
+
+              <p _msttexthash="51627602" _msthash="22"> Le rendez-vous serait prévu pendant une tempête. </p>
+
+              <p _msttexthash="51627602" _msthash="22"> Oui. Une tempête. </p>
+              <p _msttexthash="51627602" _msthash="22"> Étrange choix pour une réunion de personnes qui prétendent vouloir rester discrètes.</p>
+
+              <p _msttexthash="51627602" _msthash="22"> Encore plus étrange : les anciennes archives de Moran mentionnent plusieurs disparitions survenues lors de précédentes tempêtes. </p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Coïncidence ?</p>
+              
+              <p _msttexthash="51627602" _msthash="22"> Peut-être.</p>
+              <p _msttexthash="51627602" _msthash="22"> Mais pourquoi les Égarés se réunissent-ils toujours dans des endroits qui ont déjà été associés à des phénomènes inexpliqués ?</p>
+              <p _msttexthash="51627602" _msthash="22"> Et surtout... qui leur a demandé de venir ?</p>  
+              <p _msttexthash="51627602" _msthash="22"> Je vous conseille de ne pas vous approcher de Moran ce jour-là. </p>
+              <p _msttexthash="51627602" _msthash="22"> Enfin... Si vous tenez vraiment à rester égarés.</p>
+            </div>
+            
+            
+          </article>
+          
+        </main>
+        
+      </div>      
+      <div id="footer-placeholder"></div>
+    </body></html>
+    
+    <script>
+      
+      fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+      fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+    </script>
