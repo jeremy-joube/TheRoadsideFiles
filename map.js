@@ -72,7 +72,7 @@
 
             title: "The Last Lap",
 
-            location: "North Wilkesboro,North Carolina",
+            location: "North Wilkesboro, North Carolina",
 
             description:
                 "",
