@@ -9,7 +9,7 @@
   <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
   <script src="visitor-counter.js"></script>
-  <script src="map.js"></script>  
+  <script src="map.js" defer></script>  
   <style>
     body {
       margin: 0;
@@ -475,24 +475,4 @@
         document.getElementById("footer-placeholder").innerHTML = data;
       });
 
-
-      document
-        .getElementById("map")
-        .addEventListener("click", function() {
-
-            info.classList.remove("active");
-
-        });
-
-
-    /*
-     * Prevent closing when clicking
-     * inside the information window
-     */
-
-    info.addEventListener("click", function(event) {
-
-        event.stopPropagation();
-
-    });
 </script>

@@ -2,6 +2,26 @@
     /* ==========================================
        CASE DATABASE
     ========================================== */
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const map = document.getElementById("map");
+        const info = document.getElementById("caseInfo");
+    
+        const title = document.getElementById("caseTitle");
+        const location = document.getElementById("caseLocation");
+        const description = document.getElementById("caseDescription");
+        const link = document.getElementById("caseLink");
+    
+        if (!map) {
+            console.error("Erreur : #map introuvable.");
+            return;
+        }
+    
+        if (!info) {
+            console.error("Erreur : #caseInfo introuvable.");
+            return;
+        }
+
 
     const cases = {
 
@@ -81,32 +101,13 @@
     };
 
 
-    /* ==========================================
-       INTERACTION
-    ========================================== */
-
     const markers =
         document.querySelectorAll(".case-marker");
-
-    const info =
-        document.getElementById("caseInfo");
-
-    const title =
-        document.getElementById("caseTitle");
-
-    const location =
-        document.getElementById("caseLocation");
-
-    const description =
-        document.getElementById("caseDescription");
-
-    const link =
-        document.getElementById("caseLink");
 
 
     markers.forEach(marker => {
 
-        marker.addEventListener("click", function(event) {
+        marker.addEventListener("click", function (event) {
 
             event.stopPropagation();
 
@@ -115,6 +116,19 @@
 
             const selectedCase =
                 cases[caseID];
+
+
+            if (!selectedCase) {
+
+                console.error(
+                    "Aucune affaire trouvée pour :",
+                    caseID
+                );
+
+                return;
+
+            }
+
 
             title.textContent =
                 selectedCase.title;
@@ -129,18 +143,11 @@
                 selectedCase.link;
 
 
-            /*
-             * Position the information box
-             * near the clicked marker
-             */
-
             const mapRect =
-                document
-                    .getElementById("map")
-                    .getBoundingClientRect();
+                map.getBoundingClientRect();
 
             const markerRect =
-                this.getBoundingClientRect();
+                marker.getBoundingClientRect();
 
 
             let x =
@@ -153,11 +160,6 @@
                 mapRect.top;
 
 
-            /*
-             * Prevent the box from going
-             * outside the map.
-             */
-
             if (x + 320 > mapRect.width) {
 
                 x =
@@ -168,11 +170,11 @@
             }
 
 
-            if (y + 180 > mapRect.height) {
+            if (y + 200 > mapRect.height) {
 
                 y =
                     mapRect.height -
-                    200;
+                    220;
 
             }
 
@@ -192,25 +194,31 @@
 
 
     /*
-     * Close the window when clicking elsewhere
+     * Fermer la fiche en cliquant
+     * ailleurs sur la carte
      */
 
-    document
-        .getElementById("map")
-        .addEventListener("click", function() {
+    map.addEventListener("click", function () {
 
-            info.classList.remove("active");
+        info.classList.remove("active");
 
-        });
+    });
 
 
     /*
-     * Prevent closing when clicking
-     * inside the information window
+     * Empêcher la fermeture lorsque
+     * l'utilisateur clique dans la fiche
      */
 
-    info.addEventListener("click", function(event) {
+    info.addEventListener("click", function (event) {
 
         event.stopPropagation();
 
     });
+
+
+    console.log(
+        "The Roadside Files — Map.js chargé correctement."
+    );
+
+});
