@@ -347,6 +347,66 @@ padding:4px 8px;
 font-size:11px;
 border-radius:3px;
 }
+
+.video-archive {
+    margin-top: 30px;
+    padding: 18px 20px;
+    background: #0b0b0b;
+    border: 1px solid #4d3c2a;
+    position: relative;
+    box-shadow:
+        inset 0 0 15px rgba(0,0,0,0.5),
+        0 0 10px rgba(0,0,0,0.25);
+}
+
+.video-archive::before {
+    content: "ARCHIVE // VIDEO";
+    display: block;
+    color: #76684f;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.video-archive-title {
+    color: #d8b878;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.video-archive-description {
+    color: #8e8266;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.video-archive-button {
+    display: inline-block;
+    padding: 9px 15px;
+    border: 1px solid #6a5438;
+    background: #17120e;
+    color: #d8b878;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.video-archive-button:hover {
+    background: #3a2918;
+    border-color: #9b8053;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(216,184,120,0.15);
+}
+
+.video-archive-button::before {
+    content: "▶ ";
+    font-size: 9px;
+}
   </style>
 </head>
 
@@ -457,9 +517,31 @@ border-radius:3px;
           <p _msttexthash="30870736" _msthash="24">Quoi qu'il en soit, cette pièce est désormais terminée.</p>
             
           <p _msttexthash="30870736" _msthash="24">Rideau.</p>
+
+          
+          <div class="video-archive-title">
+              Dossier vidéo — The Horned Man
+          </div>
+      
+          <div class="video-archive-description">
+              Enregistrement récupéré pendant l'enquête.
+              Source originale conservée par les archives.
+          </div>
+      
+          <a
+              href="https://www.youtube.com/watch?v=UEfOES7ak_Y"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="video-archive-button">
+              Voir l'enregistrement
+          </a>
+      
+      </div>
+          
         </div>
         
       </div>
+      
 
     </main>
 
