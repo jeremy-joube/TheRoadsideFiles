@@ -35,7 +35,7 @@
                 "",
 
             link:
-                "0-the-horned-man.html"
+                "../Dossier/0-the-horned-man.html"
 
         },
 
@@ -49,7 +49,7 @@
                 "",
 
             link:
-                "0-where-roads-meet.html"
+                "../Dossier/0-where-roads-meet.html"
 
         },
 
