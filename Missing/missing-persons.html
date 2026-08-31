@@ -1,12 +1,4 @@
-<!-- ========================================= -->
-<!-- MISSING PERSONS PANEL -->
-<!-- THE ROADSIDE FILES -->
-<!-- ========================================= -->
-
-
-
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///C:/Users/ElPre/Downloads/preview.html -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -264,12 +256,12 @@
 
 
 <script>  
-  fetch("header.html")
+  fetch("../header.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
       });
-      fetch("sidebar.html")
+      fetch("../sidebar.html")
 .then(response => response.text())
 .then(data => {
 
@@ -278,7 +270,7 @@
     initVisitorCounter();
 
 });
-      fetch("footer.html")
+      fetch("../ footer.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
