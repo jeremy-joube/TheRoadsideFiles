@@ -87,7 +87,7 @@
 
             title: "Dead Men Don't Drown",
 
-            location: "Louisiane",
+            location: "Nouvelle-Orléans, Louisiane",
 
             description:
                 "",
