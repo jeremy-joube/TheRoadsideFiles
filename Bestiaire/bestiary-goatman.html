@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Roadside Files - Bestiaire / Goatman</title>
+
+    <link rel="icon" type="image/png" href="../icon.png">
+
+    <style>
+
+        /* =========================================================
+           THE ROADSIDE FILES
+           BESTIAIRE
+           STYLE ARCHIVE ANNÉES 2000
+        ========================================================= */
+
+        body {
+
+            margin: 0;
+
+            background:
+                #090909
+                url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+            color: #d4c7a1;
+
+            font-family: "Courier New", monospace;
+
+        }
+
+        a {
+
+            color: #e0c68d;
+
+            text-decoration: none;
+
+        }
+
+        a:hover {
+
+            color: white;
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =========================================================
+           STRUCTURE PRINCIPALE
+        ========================================================= */
+
+        .container {
+
+            display: grid;
+
+            grid-template-columns: 320px 1fr;
+
+            gap: 25px;
+
+            padding: 25px;
+
+            max-width: 1600px;
+
+            margin: auto;
+
+        }
+
+
+        /* =========================================================
+           BARRE LATÉRALE
+        ========================================================= */
+
+        .sidebar-box {
+
+            background: #111;
+
+            border: 2px solid #3e3428;
+
+            padding: 18px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 0 20px rgba(0,0,0,0.5);
+
+        }
+
+
+        .sidebar-title {
+
+            color: #d8b878;
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+            letter-spacing: 3px;
+
+            border-bottom: 1px solid #3e3428;
+
+            padding-bottom: 10px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .sidebar-box p {
+
+            color: #a89b82;
+
+            line-height: 1.5;
+
+            font-size: 13px;
+
+        }
+
+
+        .sidebar-box ul {
+
+            padding-left: 18px;
+
+        }
+
+
+        .sidebar-box li {
+
+            margin-bottom: 10px;
+
+            color: #b9a27b;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================================
+           NAVIGATION DU BESTIAIRE
+        ========================================================= */
+
+        .creature-nav {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+        .creature-nav li {
+
+            border-bottom: 1px dotted #3e3428;
+
+            padding: 8px 0;
+
+        }
+
+
+        .creature-nav a {
+
+            display: block;
+
+            font-size: 12px;
+
+        }
+
+
+        .creature-nav .active {
+
+            color: #fff;
+
+            background: #2b2118;
+
+            padding: 8px;
+
+        }
+
+
+        /* =========================================================
+           ARTICLE
+        ========================================================= */
+
+        .article {
+
+            background: #111;
+
+            border: 2px solid #3e3428;
+
+            box-shadow:
+                0 0 25px rgba(0,0,0,0.6);
+
+            overflow: hidden;
+
+            position: relative;
+
+        }
+
+
+        /*
+            Très léger effet CRT / ancien écran.
+        */
+
+        .article::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                repeating-linear-gradient(
+                    to bottom,
+
+                    rgba(255,255,255,0.015),
+
+                    rgba(255,255,255,0.015) 1px,
+
+                    transparent 1px,
+
+                    transparent 3px
+                );
+
+            pointer-events: none;
+
+        }
+
+
+        /* =========================================================
+           EN-TÊTE DE L'ARTICLE
+        ========================================================= */
+
+        .article-header {
+
+            background: #2b2118;
+
+            border-bottom: 1px solid #4d3c2a;
+
+            padding: 20px;
+
+        }
+
+
+        .article-category {
+
+            display: inline-block;
+
+            background: #3a2918;
+
+            border: 1px solid #6a5438;
+
+            padding: 5px 10px;
+
+            font-size: 11px;
+
+            margin-bottom: 15px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .article-title {
+
+            color: #efe2bc;
+
+            font-size: 38px;
+
+            margin: 0 0 8px 0;
+
+            line-height: 1.2;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .article-subtitle {
+
+            color: #9c8d70;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .article-meta {
+
+            color: #8e8266;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* =========================================================
+           CORPS DE L'ARTICLE
+        ========================================================= */
+
+        .article-body {
+
+            padding: 30px;
+
+        }
+
+
+        .article-body p {
+
+            color: #b9ab8e;
+
+            line-height: 1.8;
+
+            margin-bottom: 22px;
+
+            font-size: 15px;
+
+        }
+
+
+        .article-body h2 {
+
+            color: #d8b878;
+
+            margin-top: 35px;
+
+            margin-bottom: 20px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            border-bottom: 1px solid #3e3428;
+
+            padding-bottom: 8px;
+
+        }
+
+
+        /* =========================================================
+           IMAGE DE LA CRÉATURE
+        ========================================================= */
+
+        .creature-image-wrapper {
+
+            background: #0b0b0b;
+
+            border: 2px solid #3e3428;
+
+            padding: 10px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .creature-image {
+
+            width: 100%;
+
+            max-height: 520px;
+
+            object-fit: contain;
+
+            display: block;
+
+            filter:
+                grayscale(100%)
+                sepia(20%)
+                brightness(0.75)
+                contrast(1.1);
+
+        }
+
+
+        .image-caption {
+
+            border-top: 1px solid #3e3428;
+
+            margin-top: 10px;
+
+            padding: 8px 5px 2px 5px;
+
+            color: #746a57;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =========================================================
+           FICHE D'IDENTIFICATION
+        ========================================================= */
+
+        .field-record {
+
+            background: #0d0d0d;
+
+            border: 2px solid #3e3428;
+
+            margin: 30px 0;
+
+        }
+
+
+        .field-record-title {
+
+            background: #211910;
+
+            border-bottom: 1px solid #4d3c2a;
+
+            padding: 10px 15px;
+
+            color: #d8b878;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .field-row {
+
+            display: grid;
+
+            grid-template-columns: 190px 1fr;
+
+            border-bottom: 1px dotted #3e3428;
+
+            min-height: 38px;
+
+        }
+
+
+        .field-label {
+
+            padding: 10px 15px;
+
+            color: #796d57;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .field-value {
+
+            padding: 10px 15px;
+
+            color: #b9ab8e;
+
+            font-size: 13px;
+
+        }
+
+
+        .danger {
+
+            color: #c97979;
+
+        }
+
+
+        .unknown {
+
+            color: #807561;
+
+        }
+
+
+        /* =========================================================
+           CITATION
+        ========================================================= */
+
+        .quote {
+
+            border-left: 3px solid #5b4a32;
+
+            padding-left: 20px;
+
+            color: #d8b878;
+
+            font-style: italic;
+
+            margin: 30px 0;
+
+            line-height: 1.7;
+
+        }
+
+
+        .quote-author {
+
+            display: block;
+
+            margin-top: 10px;
+
+            color: #706650;
+
+            font-style: normal;
+
+            font-size: 11px;
+
+        }
+
+
+        /* =========================================================
+           NOTE DU CHASSEUR
+        ========================================================= */
+
+        .hunter-note {
+
+            background: #17130e;
+
+            border: 1px solid #4d3c2a;
+
+            padding: 18px;
+
+            margin: 30px 0;
+
+            color: #a99a7c;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .hunter-note-title {
+
+            color: #d8b878;
+
+            margin-bottom: 10px;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =========================================================
+           AVERTISSEMENT
+        ========================================================= */
+
+        .warning-box {
+
+            background: #170d0d;
+
+            border: 1px solid #6b2f2f;
+
+            padding: 15px;
+
+            margin-top: 30px;
+
+            color: #d49a9a;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================================================
+           DOSSIERS ASSOCIÉS
+        ========================================================= */
+
+        .case-files {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .case-file {
+
+            background: #0d0d0d;
+
+            border: 1px solid #3e3428;
+
+            padding: 15px;
+
+            transition: .2s;
+
+        }
+
+
+        .case-file:hover {
+
+            background: #1a1510;
+
+            border-color: #6a5438;
+
+        }
+
+
+        .case-number {
+
+            color: #6f654f;
+
+            font-size: 10px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .case-name {
+
+            color: #d8b878;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .case-status {
+
+            color: #77705f;
+
+            font-size: 10px;
+
+            margin-top: 7px;
+
+        }
+
+
+        /* =========================================================
+           PIED DE PAGE DES ARCHIVES
+        ========================================================= */
+
+        .archive-footer {
+
+            margin-top: 45px;
+
+            border-top: 1px solid #3e3428;
+
+            padding-top: 15px;
+
+            color: #625b4b;
+
+            font-size: 10px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* =========================================================
+           VERSION MOBILE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .article-title {
+
+                font-size: 28px;
+
+            }
+
+            .article-body {
+
+                padding: 20px;
+
+            }
+
+            .field-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .case-files {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =============================================================
+     EN-TÊTE
+============================================================= -->
+
+<div id="header-placeholder"></div>
+
+
+<!-- =============================================================
+     CONTENU PRINCIPAL
+============================================================= -->
+
+<div class="container">
+
+
+    <!-- =========================================================
+         BARRE LATÉRALE
+    ========================================================== -->
+
+    <aside>
+
+
+        <div class="sidebar-box">
+
+            <div class="sidebar-title">
+                Bestiaire
+            </div>
+
+            <p>
+                Archives des entités surnaturelles
+                connues ou suspectées.
+            </p>
+
+            <p>
+                Certaines entrées ont été vérifiées.
+                D'autres ne l'ont pas été.
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-box">
+
+            <div class="sidebar-title">
+                Classification
+            </div>
+
+            <ul class="creature-nav">
+
+                <li>
+                    <a href="#" class="active">
+                        [ HUMANOÏDE ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ ESPRIT ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ MÉTAMORPHE ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ BÊTE ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ DÉMON ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ SORCIÈRE ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ MORT-VIVANT ]
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        [ INCONNU ]
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="sidebar-box">
+
+            <div class="sidebar-title">
+                État du dossier
+            </div>
+
+            <p>
+                <strong>DOSSIER :</strong>
+                Nº 014
+            </p>
+
+            <p>
+                <strong>STATUT :</strong>
+                PARTIELLEMENT VÉRIFIÉ
+            </p>
+
+            <p>
+                <strong>NIVEAU :</strong>
+                <span class="danger">
+                    DANGER ÉLEVÉ
+                </span>
+            </p>
+
+            <p>
+                <strong>MISE À JOUR :</strong>
+                14 OCT 2006
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-box">
+
+            <div class="sidebar-title">
+                Dossiers associés
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        L'Homme Cornu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Témoignages du Maryland
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Fletchertown Road
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- =========================================================
+         ARTICLE
+    ========================================================== -->
+
+    <main>
+
+        <article class="article">
+
+
+            <!-- EN-TÊTE -->
+
+            <div class="article-header">
+
+                <div class="article-category">
+                    BESTIAIRE // HUMANOÏDE
+                </div>
+
+
+                <h1 class="article-title">
+                    Goatman
+                </h1>
+
+
+                <div class="article-subtitle">
+                    « Celui qui attend au-delà du dernier lampadaire. »
+                </div>
+
+
+                <div class="article-meta">
+
+                    DOSSIER Nº 014
+                    —
+                    ARCHIVÉ PAR HUNTER77
+                    —
+                    DERNIÈRE MISE À JOUR : 14 OCT 2006
+
+                </div>
+
+            </div>
+
+
+            <!-- CORPS -->
+
+            <div class="article-body">
+
+
+                <!-- IMAGE -->
+
+                <div class="creature-image-wrapper">
+
+
+                    <img
+                        src="Goatman - Cryptide.png"
+                        class="creature-image"
+                        alt="Illustration de l'Goatman">
+
+                    <div class="image-caption">
+
+                        FIG. XIV — Goatman
+
+                        <br>
+
+                        Reconstitution basée sur trois
+                        témoignages indépendants.
+
+                        <br>
+
+                        Source originale inconnue.
+
+                    </div>
+
+                </div>
+
+
+                <!-- FICHE D'IDENTIFICATION -->
+
+                <div class="field-record">
+
+                    <div class="field-record-title">
+                        Identification
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Nom courant
+                        </div>
+
+                        <div class="field-value">
+                            Goatman
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Autres noms
+                        </div>
+
+                        <div class="field-value">
+                            Goatman / Homme Cornu
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Classification
+                        </div>
+
+                        <div class="field-value">
+                            Humanoïde / Cryptide
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Région connue
+                        </div>
+
+                        <div class="field-value">
+                            Maryland, États-Unis
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Habitat
+                        </div>
+
+                        <div class="field-value">
+                            Forêts / Routes isolées / Ponts
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Niveau de danger
+                        </div>
+
+                        <div class="field-value danger">
+                            III — ÉLEVÉ
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Faiblesse connue
+                        </div>
+
+                        <div class="field-value unknown">
+                            INCONNUE
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-row">
+
+                        <div class="field-label">
+                            Vérification
+                        </div>
+
+                        <div class="field-value">
+                            PARTIELLEMENT VÉRIFIÉ
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CITATION -->
+
+                <div class="quote">
+
+                    « Si vous entendez des sabots,
+                    ne vous arrêtez pas pour savoir
+                    quel animal les fait. »
+
+                    <span class="quote-author">
+                        — Hunter77, notes de terrain, 1998
+                    </span>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <h2>
+                    Description
+                </h2>
+
+
+                <p>
+
+                    Il existe des choses qui ressemblent
+                    à des hommes.
+
+                    Il existe des choses qui ressemblent
+                    à des animaux.
+
+                    Et puis il existe des choses qui semblent
+                    avoir oublié ce qu'elles étaient censées
+                    être.
+
+                </p>
+
+
+                <p>
+
+                    Goatman est généralement décrit
+                    comme une silhouette humanoïde de grande
+                    taille présentant des caractéristiques
+                    caprines évidentes.
+
+                    Les témoignages divergent
+                    considérablement.
+
+                    Certains parlent de cornes.
+
+                    D'autres décrivent de la fourrure,
+                    des sabots ou une tête ressemblant
+                    entièrement à celle d'une chèvre.
+
+                    Plusieurs témoins affirment pourtant
+                    que la créature semblait presque
+                    totalement humaine.
+
+                </p>
+
+
+                <p>
+
+                    La silhouette, elle, reste
+                    remarquablement constante.
+
+                    Grande.
+
+                    Mince.
+
+                    Anormale.
+
+                </p>
+
+
+                <!-- FOLKLORE -->
+
+                <h2>
+                    Folklore
+                </h2>
+
+
+                <p>
+
+                    Les histoires concernant Goatman
+                    circulent dans le Maryland depuis
+                    plusieurs décennies.
+
+                    La créature est principalement associée
+                    aux routes isolées, aux zones boisées
+                    et aux ponts.
+
+                </p>
+
+
+                <p>
+
+                    Une histoire particulièrement répandue
+                    affirme que Goatman était autrefois
+                    un scientifique travaillant sur des
+                    expériences impliquant des chèvres.
+
+                    Selon cette version, un accident aurait
+                    transformé l'homme en créature.
+
+                </p>
+
+
+                <p>
+
+                    Aucun élément ne permet de confirmer
+                    cette explication.
+
+                </p>
+
+
+                <div class="hunter-note">
+
+                    <div class="hunter-note-title">
+                        Note du chasseur
+                    </div>
+
+                    Chaque fois que quelqu'un écrit
+                    « expérience scientifique » dans
+                    un rapport sur Goatman,
+                    demandez-lui d'où vient cette histoire.
+
+                    Neuf fois sur dix, il la tient
+                    de quelqu'un qui la tient
+                    de quelqu'un d'autre.
+
+                    — J.W.
+
+                </div>
+
+
+                <!-- COMPORTEMENT -->
+
+                <h2>
+                    Comportement
+                </h2>
+
+
+                <p>
+
+                    La majorité des rencontres ont lieu
+                    après la tombée de la nuit.
+
+                    L'entité semble privilégier les endroits
+                    où la circulation humaine est limitée.
+
+                </p>
+
+
+                <p>
+
+                    Certains témoignages décrivent
+                    un comportement agressif.
+
+                    D'autres parlent simplement d'une
+                    créature observant les témoins
+                    depuis une certaine distance.
+
+                </p>
+
+
+                <p>
+
+                    Plusieurs rapports mentionnent
+                    une créature suivant des véhicules.
+
+                </p>
+
+
+                <!-- SIGNES -->
+
+                <h2>
+                    Signes de présence
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        Bruits de sabots sur le bitume.
+                    </li>
+
+                    <li>
+                        Griffures contre les portières
+                        ou les vitres d'un véhicule.
+                    </li>
+
+                    <li>
+                        Silhouette de grande taille se tenant
+                        au-delà de la portée des phares.
+                    </li>
+
+                    <li>
+                        Animaux réagissant violemment
+                        à quelque chose d'invisible.
+                    </li>
+
+                    <li>
+                        Disparition soudaine après
+                        un contact visuel.
+                    </li>
+
+                </ul>
+
+
+                <!-- CAPACITÉS -->
+
+                <h2>
+                    Capacités rapportées
+                </h2>
+
+
+                <p>
+
+                    Aucune capacité n'a été établie
+                    avec certitude.
+
+                </p>
+
+
+                <p>
+
+                    Des témoins ont rapporté une force
+                    et une vitesse inhabituelles.
+
+                    Certains affirment que l'entité peut
+                    se déplacer silencieusement malgré
+                    son apparente corpulence.
+
+                </p>
+
+
+                <p>
+
+                    Ces témoignages restent invérifiés.
+
+                </p>
+
+
+                <!-- FAIBLESSES -->
+
+                <h2>
+                    Faiblesses connues
+                </h2>
+
+
+                <div class="warning-box">
+
+                    <strong>
+                        AUCUNE FAIBLESSE VÉRIFIÉE DANS LES ARCHIVES.
+                    </strong>
+
+                    <br><br>
+
+                    Ne supposez pas qu'une faiblesse
+                    inconnue signifie que la créature
+                    est invulnérable.
+
+                    Cela signifie simplement
+                    que nous ne l'avons pas encore trouvée.
+
+                </div>
+
+
+                <!-- DOSSIERS -->
+
+                <h2>
+                    Dossiers associés
+                </h2>
+
+
+                <div class="case-files">
+
+
+                    <a href="article-goatman.html"
+                       class="case-file">
+
+                        <div class="case-number">
+                            DOSSIER Nº 031
+                        </div>
+
+                        <div class="case-name">
+                            Goatman
+                        </div>
+
+                        <div class="case-status">
+                            MARYLAND — CLASSÉ
+                        </div>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="case-file">
+
+                        <div class="case-number">
+                            DOSSIER Nº 044
+                        </div>
+
+                        <div class="case-name">
+                            FLETCHERTOWN ROAD
+                        </div>
+
+                        <div class="case-status">
+                            MARYLAND — NON RÉSOLU
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- NOTE FINALE -->
+
+                <h2>
+                    Note finale des archives
+                </h2>
+
+
+                <p>
+
+                    Nous n'avons aucun corps.
+
+                    Aucune photographie confirmée.
+
+                    Aucun échantillon biologique fiable.
+
+                    Aucune explication.
+
+                </p>
+
+
+                <p>
+
+                    Ce que nous avons, ce sont des témoignages.
+
+                    Beaucoup trop de témoignages.
+
+                </p>
+
+
+                <div class="quote">
+
+                    « Le problème avec les légendes,
+                    c'est qu'un jour quelqu'un finit
+                    par en voir une. »
+
+                    <span class="quote-author">
+                        — Chasseur inconnu
+                    </span>
+
+                </div>
+
+
+                <div class="warning-box">
+
+                    <strong>
+                        AVERTISSEMENT — ARCHIVES
+                    </strong>
+
+                    <br><br>
+
+                    Ce dossier contient des informations
+                    provenant de témoignages, d'archives
+                    folkloriques et de rapports de chasseurs
+                    indépendants.
+
+                    <br><br>
+
+                    Toutes les informations n'ont pas
+                    été vérifiées.
+
+                    <br><br>
+
+                    LA CONNAISSANCE N'EST PAS LA VÉRITÉ.
+
+                </div>
+
+
+                <div class="archive-footer">
+
+                    <span>
+                        THE ROADSIDE FILES // BESTIAIRE
+                    </span>
+
+                    <span>
+                        DOSSIER Nº 014
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+    </main>
+
+</div>
+
+
+<!-- =============================================================
+     PIED DE PAGE
+============================================================= -->
+
+<div id="footer-placeholder"></div>
+
+
+<script>
+
+    fetch("../header.html")
+
+        .then(response => response.text())
+
+        .then(data => {
+
+            document
+                .getElementById("header-placeholder")
+                .innerHTML = data;
+
+        });
+
+
+    fetch("../footer.html")
+
+        .then(response => response.text())
+
+        .then(data => {
+
+            document
+                .getElementById("footer-placeholder")
+                .innerHTML = data;
+
+        });
+
+</script>
+
+
+</body>
+
+</html>
