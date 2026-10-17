@@ -55,7 +55,7 @@
 
         "ghost-rider": {
 
-            title: "The Ghost Rider",
+            title: "Riders on the Storm",
 
             location: "Tombstone, Arizona",
 
@@ -63,7 +63,7 @@
                 "",
 
             link:
-                ""
+                "../Dossier/X-riders-on-the-storm.html"
 
         },
 
