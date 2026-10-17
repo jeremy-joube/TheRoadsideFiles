@@ -53,6 +53,20 @@
 
         },
 
+        "welcome-home": {
+
+            title: "Welcome Home",
+
+            location: "Hollow Graves, Vermont",
+
+            description:
+                "",
+
+            link:
+                "../Dossier/1-welcome-home.html"
+
+        },
+
         "ghost-rider": {
 
             title: "Riders on the Storm",
