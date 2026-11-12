@@ -1,144 +1,188 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="fr"><head><meta charset="UTF-8">
   
+  <meta charset="UTF-8">
+  <!-- Encodage et affichage -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title _msttexthash="128271" _msthash="0">The Roadside Files</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="../icon.png">
-  <!-- Fallback for older browsers -->
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../icon.png">
+  
+  <title>The Roadside Files - Personnes Disparues</title>
+  
+  <!-- Icônes du site -->
+  <link rel="icon" type="image/png" sizes="32x32"
+  href="https://www.theroadsidefiles.com/icon.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+  href="https://www.theroadsidefiles.com/icon.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+  href="https://www.theroadsidefiles.com/icon.png">
+  
+  <!-- SEO -->
+  <meta name="description"
+  content="The Roadside Files — Archives occultes, enquêtes inexpliquées et dossiers de chasseurs. Découvrez les affaires étranges qui traversent les États-Unis.">
+  <meta name="keywords"
+  content="The Roadside Files, paranormal, surnaturel, chasseurs, occultisme, monstres, enquêtes paranormales, Supernatural, cryptides, États-Unis">
+  <meta name="author" content="The Roadside Files">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.theroadsidefiles.com/">
+  
+  <!-- Open Graph : Discord, Facebook, etc. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Roadside Files">
+  <meta property="og:description"
+  content="Archives occultes, enquêtes inexpliquées et dossiers de chasseurs. Certaines histoires ne devraient jamais être retrouvées.">
+  <meta property="og:url" content="https://www.theroadsidefiles.com/">
+  <meta property="og:site_name" content="The Roadside Files">
+  <meta property="og:locale" content="fr_FR">
+
+  <!--<meta property="og:image"
+  content="https://www.theroadsidefiles.com/icon.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"
+  content="The Roadside Files — Archives occultes"> -->
+  
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Roadside Files">
+  <meta name="twitter:description"
+  content="Archives occultes, enquêtes inexpliquées et dossiers de chasseurs.">
+  <meta name="twitter:image"
+  content="https://www.theroadsidefiles.com/icon.png">
+  
+  <!-- Apparence du navigateur -->
+  <meta name="theme-color" content="#6a5438">
+  <meta name="msapplication-TileColor" content="#6a5438">
+
   <script src="../visitor-counter.js"></script>
   
   <style>
     
-  
+    
     /* ========================================= */
     /* MISSING PERSONS BOARD */
     /* ========================================= */
     
     .missing-board {
-    
+      
       background: #111;
       border: 2px solid #3e3428;
-    
+      
       padding: 20px;
       margin-top: 30px;
-    margin-bottom: 15px;
+      margin-bottom: 15px;
       box-shadow:
-        0 0 20px rgba(0,0,0,0.7),
-        inset 0 0 10px rgba(255,255,255,0.02);
-    
+      0 0 20px rgba(0,0,0,0.7),
+      inset 0 0 10px rgba(255,255,255,0.02);
+      
       position: relative;
       overflow: hidden;
     }
     
     
     .missing-header {
-    
+      
       color: #d8b878;
-    
+      
       font-size: 22px;
       letter-spacing: 4px;
-    
+      
       margin-bottom: 25px;
-    
+      
       text-align: center;
-    
+      
       font-family: "Courier New", monospace;
       text-transform: uppercase;
-    
+      
       border-bottom: 1px solid #3e3428;
       padding-bottom: 15px;
     }
     
     .missing-card {
-    
+      
       display: flex;
       gap: 18px;
-    
+      
       background: #0b0b0b;
-    
+      
       border: 1px solid #33281d;
-    
+      
       margin-bottom: 20px;
       padding: 15px;
-    
+      
       transition: all 0.2s ease;
     }
     
     
     .missing-card img {
-    
+      
       width: 120px;
       height: 150px;
-    
+      
       object-fit: cover;
-    
+      
       border: 2px solid #4d3c2a;
-    
+      
       filter:
-        contrast(1.05)
-        brightness(0.92)
-        saturate(0.8);
+      contrast(1.05)
+      brightness(0.92)
+      saturate(0.8);
     }
     
     .missing-content {
-    
+      
       flex: 1;
-    
+      
       font-family: "Courier New", monospace;
     }
     
     .missing-name {
-    
+      
       color: #efe2bc;
-    
+      
       font-size: 24px;
       margin-bottom: 10px;
-    
+      
       text-transform: uppercase;
       letter-spacing: 2px;
     }
     
     .missing-info {
-    
+      
       color: #9b8a67;
-    
+      
       font-size: 12px;
-    
+      
       margin-bottom: 8px;
     }
     
     .missing-location {
-    
+      
       color: #bfa97a;
-    
+      
       font-size: 14px;
-    
+      
       margin-bottom: 12px;
     }
     
     .missing-description {
-    
+      
       color: #a59a84;
-    
+      
       line-height: 1.5;
-    
+      
       font-size: 13px;
     }
     
     /* MOBILE */
     
     @media (max-width: 700px) {
-    
+      
       .missing-card {
-    
+        
         flex-direction: column;
       }
-    
+      
       .missing-card img {
-    
+        
         width: 100%;
         height: 240px;
       }
@@ -164,291 +208,291 @@
     <main>
       
       
-
-<div class="missing-board">
-
-  <div class="missing-header">
-    PERSONNES DISPARUES
-  </div>
-
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Silas Vale - Majordome.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Silas Vale
+      
+      <div class="missing-board">
+        
+        <div class="missing-header">
+          PERSONNES DISPARUES
+        </div>
+        
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Silas Vale - Majordome.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Silas Vale
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-11-01" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Hollow Graves (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu près du Manoir Graves.
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Luther Finch - Médecin égaré.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Luther Finch
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-09-27" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Burlington (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu durant une tempête près de la centrale Moran.
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Eleanor Blackwood - Mami égarée.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Eleanor Blackwood
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-09-27" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Burlington (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu durant une tempête près de la centrale Moran.
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Lindsay Cooper - Voisine égaré.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Lindsay Cooper
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-09-27" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Burlington (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu durant une tempête près de la centrale Moran.
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Kelly Wong - Etudiante égaré.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Kelly Wong
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-09-27" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Burlington (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu durant une tempête près de la centrale Moran.
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Mark Simpson - Ancien contre-maitre égaré.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Mark Simpson 
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-09-27" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Burlington (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu durant une tempête près de la centrale Moran.
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="Christopher Sawyer - Ancien militaire égaré.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Christopher Sawyer 
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-09-27" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Burlington (Vermont)
+            </div>
+            
+            <div class="missing-description">
+              Disparu durant une tempête près de la centrale Moran.
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- PERSON 1 -->
+        <div class="missing-card">
+          
+          <img
+          src="6323804176e699d62a9e98e21ff87f6f.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Tyler Ross
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-10-25" data-prefix="Disparu">
+              Disparu depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Black Creek (Maryland)
+            </div>
+            
+            <div class="missing-description">
+              Véhicule retrouvé abandonné près de la Route de comté 14.
+              Les autorités pensent que la victime a pu entrer dans la forêt volontairement.
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- PERSON 2 -->
+        <div class="missing-card">
+          
+          <img
+          src="Clara.jpg"
+          alt="Missing Person"
+          >
+          
+          <div class="missing-content">
+            
+            <div class="missing-name">
+              Clara Luciani
+            </div>
+            
+            <div class="missing-info" data-disappearance-date="2006-07-12" data-prefix="Disparue">
+              Disparue depuis <span class="days-missing">—</span>
+            </div>
+            
+            <div class="missing-location">
+              Chicago (Illinois)
+            </div>
+            
+            <div class="missing-description">
+              Devait se rendre à une séance de shooting photo et n'a pas été revue depuis. Son appartement a été vandalisé la même journée.
+            </div>
+            
+          </div>
+          
+        </div>
       </div>
-
-      <div class="missing-info">
-        Disparu depuis 1 jours
-      </div>
-
-      <div class="missing-location">
-        Hollow Graves (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu près du Manoir Graves.
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Luther Finch - Médecin égaré.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Luther Finch
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 7 jours
-      </div>
-
-      <div class="missing-location">
-        Burlington (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu durant une tempête près de la centrale Moran.
-      </div>
-
-    </div>
-
-  </div>
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Eleanor Blackwood - Mami égarée.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Eleanor Blackwood
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 7 jours
-      </div>
-
-      <div class="missing-location">
-        Burlington (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu durant une tempête près de la centrale Moran.
-      </div>
-
-    </div>
-
-  </div>
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Lindsay Cooper - Voisine égaré.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Lindsay Cooper
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 7 jours
-      </div>
-
-      <div class="missing-location">
-        Burlington (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu durant une tempête près de la centrale Moran.
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Kelly Wong - Etudiante égaré.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Kelly Wong
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 7 jours
-      </div>
-
-      <div class="missing-location">
-        Burlington (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu durant une tempête près de la centrale Moran.
-      </div>
-
-    </div>
-
-  </div>
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Mark Simpson - Ancien contre-maitre égaré.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Mark Simpson 
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 7 jours
-      </div>
-
-      <div class="missing-location">
-        Burlington (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu durant une tempête près de la centrale Moran.
-      </div>
-
-    </div>
-
-  </div>
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="Christopher Sawyer - Ancien militaire égaré.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Christopher Sawyer 
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 7 jours
-      </div>
-
-      <div class="missing-location">
-        Burlington (Vermont)
-      </div>
-
-      <div class="missing-description">
-        Disparu durant une tempête près de la centrale Moran.
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- PERSON 1 -->
-  <div class="missing-card">
-
-    <img
-      src="6323804176e699d62a9e98e21ff87f6f.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Tyler Ross
-      </div>
-
-      <div class="missing-info">
-        Disparu depuis 1 mois
-      </div>
-
-      <div class="missing-location">
-        Black Creek (Maryland)
-      </div>
-
-      <div class="missing-description">
-        Véhicule retrouvé abandonné près de la Route de comté 14.
-        Les autorités pensent que la victime a pu entrer dans la forêt volontairement.
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- PERSON 2 -->
-  <div class="missing-card">
-
-    <img
-      src="Clara.jpg"
-      alt="Missing Person"
-    >
-
-    <div class="missing-content">
-
-      <div class="missing-name">
-        Clara Luciani
-      </div>
-
-      <div class="missing-info">
-        Disparue depuis 4 mois
-      </div>
-
-      <div class="missing-location">
-        Chicago (Illinois)
-      </div>
-
-      <div class="missing-description">
-        Devait se rendre à une séance de shooting photo et n'a pas été revue depuis. Son appartement a été vandalisé la même journée.
-      </div>
-
-    </div>
-
-  </div>
-  </div>
-
+      
       <!-- SUBMISSION -->
       <div class="panel submission">
         
-        <h2 _msttexthash="360581" _msthash="36">Soumission anonyme</h2>
+        <h2>Soumission anonyme</h2>
         
-        <input type="text" placeholder="Emplacement..." _mstplaceholder="143104" _msthash="37">
+        <input type="text" placeholder="Emplacement...">
         
-        <textarea placeholder="Décris ce que tu as vu..." _mstplaceholder="440414" _msthash="38"></textarea>
+        <textarea placeholder="Décris ce que tu as vu..."></textarea>
         
-        <button _msttexthash="631800" _msthash="39">Rapport de téléchargement</button>
+        <button>Rapport de téléchargement</button>
         
       </div>
       
@@ -458,27 +502,81 @@
   
   <div id="footer-placeholder"></div>
   
-</body></html>
-
-
-<script>  
-  fetch("../header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
+  <script>
+    // Le site suit la date réelle avec un décalage fictif de 20 ans.
+    // Exemple : 12/11/2026 dans la réalité = 12/11/2006 sur le site.
+    function getSiteDate() {
+      const now = new Date();
+      const year = now.getFullYear() - 20;
+      const month = now.getMonth();
+      const day = now.getDate();
+      
+      // Gère le 29 février lorsque l'année fictive n'est pas bissextile.
+      const lastDayOfMonth = new Date(year, month + 1, 0).getDate();
+      return new Date(year, month, Math.min(day, lastDayOfMonth));
+    }
+    
+    function updateMissingDays() {
+      const siteDate = getSiteDate();
+      const siteDay = Date.UTC(
+      siteDate.getFullYear(),
+      siteDate.getMonth(),
+      siteDate.getDate()
+      );
+      
+      document.querySelectorAll("[data-disappearance-date]").forEach(card => {
+        const dateText = card.dataset.disappearanceDate;
+        const parts = dateText.split("-").map(Number);
+        const disappearanceDay = Date.UTC(parts[0], parts[1] - 1, parts[2]);
+        const days = Math.floor((siteDay - disappearanceDay) / 86400000);
+        const output = card.querySelector(".days-missing");
+        
+        if (!output) return;
+        
+        if (days < 0) {
+          output.textContent = "date à venir";
+          return;
+        }
+        
+        output.textContent = `${days} ${days === 1 ? "jour" : "jours"}`;
       });
-      fetch("../sidebar.html")
-.then(response => response.text())
-.then(data => {
+    }
+    
+    updateMissingDays();
+    
+    // Chargement des éléments communs du site.
+    fetch("../header.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Impossible de charger header.html");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error(error));
+    
+    fetch("../sidebar.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Impossible de charger sidebar.html");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("sidebar-placeholder").innerHTML = data;
+      if (typeof initVisitorCounter === "function") initVisitorCounter();
+    })
+    .catch(error => console.error(error));
+    
+    fetch("../footer.html")
+    .then(response => {
+      if (!response.ok) throw new Error("Impossible de charger footer.html");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error(error));
+  </script>
+</body>
+</html>
 
-    document.getElementById("sidebar-placeholder").innerHTML = data;
 
-    initVisitorCounter();
-
-});
-      fetch("../footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
-      });
-</script>
