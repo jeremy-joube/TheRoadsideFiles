@@ -67,6 +67,20 @@
 
         },
 
+        "buffalo": {
+
+            title: "???",
+
+            location: "Buffalo, New York",
+
+            description:
+            "",
+
+            link:
+                "../Dossier/2-buffalo.html"
+
+        },
+
         "ghost-rider": {
 
             title: "Riders on the Storm",
