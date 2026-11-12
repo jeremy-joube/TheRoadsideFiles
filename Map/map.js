@@ -111,6 +111,34 @@
 
         },
 
+        "train": {
+
+            title: "The Passengers",
+
+            location: "Denver, Colorado",
+
+            description:
+            "",
+
+            link:
+                "../Dossier/X-the-passengers.html"
+
+        },
+
+        "mercy": {
+
+            title: "Saint Mercy's",
+
+            location: "Limington, Maine",
+
+            description:
+            "",
+
+            link:
+                "../Dossier/X-saint-mercy's.html"
+                
+        },
+
 
         "dragon": {
 
